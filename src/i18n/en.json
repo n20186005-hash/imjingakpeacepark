@@ -1,7 +1,26 @@
 {
   "meta": {
     "title": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) | Paju, Gyeonggi-do · Korea's Iconic Peace Park by the DMZ",
-    "description": "The complete guide to Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원): a vast green peace park in Paju, Gyeonggi-do, right beside the Military Demarcation Line, built to pray for peace and reunification of the Korean Peninsula. It features the iconic Wind Hill (thousands of colorful pinwheels), the Peace Bell, Freedom Bridge, and lawns displaying war relics and peace art installations. Opening hours, how to get there, history, photo spots and visitor reviews — all in one place."
+    "description": "The complete guide to Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원): a peace park in Paju, Gyeonggi-do, near the Military Demarcation Line. Beyond Wind Hill, the Peace Bell and Freedom Bridge, the site preserves the lived memory of separated families, POW return, and the unresolved history of the DMZ."
+  },
+  "schema": {
+    "name": "Imjingak Pyeonghwa Nuri Park",
+    "alternateName": ["임진각 평화누리공원", "Imjingak Peace Nuri Park"],
+    "description": "A peace-themed public park in Paju, Gyeonggi-do, close to the Military Demarcation Line, combining memorial space, public green landscape, and border-history interpretation.",
+    "streetAddress": "148-40 Imjingak-ro, Munsan-eup",
+    "addressLocality": "Paju-si",
+    "addressRegion": "Gyeonggi-do",
+    "postalCode": "10808",
+    "latitude": 37.8902,
+    "longitude": 126.7702,
+    "publicAccess": true,
+    "isAccessibleForFree": true,
+    "sameAs": [
+      "https://dmz.paju.go.kr",
+      "https://ggtour.or.kr/dmz/",
+      "https://access.visitkorea.or.kr",
+      "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9"
+    ]
   },
   "header": {
     "siteName": "Imjingak Pyeonghwa Nuri Park",
@@ -80,14 +99,21 @@
   },
   "quickFactsDashboard": {
     "title": "Imjingak at a Glance · Data Board",
-    "subtitle": "A few numbers to understand this green space by the Imjin River, built for peace and reunification.",
+    "subtitle": "Read this riverside memorial landscape through a set of numbers that carry more historical weight than a typical park summary.",
     "items": [
-      { "icon": "🕊️", "label": "Founded / Founded", "value": "1972", "note": "Built in 1972 to hold the longings of separated families for relatives in the North and to pray for peace and reunification — one of Korea's most representative peace parks." },
-      { "icon": "🎡", "label": "Wind Hill / Wind Hill", "value": "Thousands of pinwheels", "note": "The park's signature Wind Hill is made of thousands of colorful pinwheels that turn like a colorful sea in the wind — Imjingak's most photogenic spot." },
-      { "icon": "🔔", "label": "Peace Bell / Peace Bell", "value": "Bell of wishes", "note": "The park has a Peace Bell visitors can ring to pray for peace; the bell and its setting form a quiet, solemn memorial space." },
-      { "icon": "🌉", "label": "Freedom Bridge / Freedom Bridge", "value": "POW return site", "note": "After the 1953 Korean War Armistice, about 13,000 POWs returned south across this bridge; its name expresses the longing for freedom and reunion." },
-      { "icon": "📍", "label": "Location / Location", "value": "37°53′N, 126°45′E", "note": "Plus Code: VPRV+V6 Paju. At 148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do, just south of the DMZ." },
-      { "icon": "🚠", "label": "Nearby / Nearby", "value": "Peace Gondola", "note": "The Paju Imjingak Peace Gondola crosses the Imjin River into the DMZ control zone, overlooking the demarcation line and Imjin River — an official deep-DMZ experience." }
+      { "icon": "🕊️", "label": "Founded", "value": "1972", "note": "Imjingak was first created for separated families. It was not conceived as a leisure park, but as a place where people unable to return home could face north and hold on to memory." },
+      { "icon": "🎡", "label": "Wind Hill", "value": "3,000 pinwheels", "note": "The pinwheels of Wind Hill are often read as an allusion to the traditional phrase 'three thousand ri of Korean land', turning peace into a visible public landscape." },
+      { "icon": "🚂", "label": "Jangdan Station steam locomotive", "value": "1,020 bullet holes", "note": "The ruined locomotive known as the 'Iron Horse' remains one of the clearest physical witnesses of wartime destruction, now preserved as Registered Cultural Heritage No. 78." },
+      { "icon": "🌉", "label": "Freedom Bridge", "value": "12,773 POWs", "note": "After the 1953 armistice, about 12,773 South Korean and UN prisoners of war returned south through this crossing, giving the bridge its enduring moral force." },
+      { "icon": "🪨", "label": "Mangbaedan Altar", "value": "Built in 1985", "note": "Mangbaedan remains one of the most meaningful places where separated families bow toward their northern hometowns during major holidays." },
+      { "icon": "📍", "label": "Coordinates", "value": "37.8902, 126.7702", "note": "At 148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do, the park's location within the southern DMZ frontier is itself part of its historical meaning." }
+    ],
+    "distanceTitle": "Border Distance Scale",
+    "distanceSubtitle": "Converting abstract border tension into kilometers helps visitors grasp why Imjingak feels different from an ordinary suburban park.",
+    "distanceMetrics": [
+      { "label": "Distance to the Military Demarcation Line", "value": "about 7.0 km", "note": "This short straight-line distance explains much of the psychological pressure and symbolic charge that still surrounds the site." },
+      { "label": "Distance to Kaesong Industrial Complex", "value": "about 22.0 km", "note": "The proximity to Kaesong shows how closely everyday geography and inter-Korean history continue to overlap in this region." },
+      { "label": "Distance to Seoul City Hall", "value": "about 54.0 km", "note": "Imjingak is not far from the capital, which is precisely why it remains such an accessible public gateway to questions of division, peace, and reunification." }
     ]
   },
   "hiddenRules": {
@@ -341,55 +367,103 @@
   },
   "humanities": {
     "title": "Humanities & Peace Theme Research",
-    "subtitle": "Put the separated-families past, the founding intent, and the memory of the Peace Bell and Freedom Bridge on one timeline to truly understand why this green space is more than 'a pretty park'."
+    "subtitle": "If Imjingak is read only as a photogenic park of pinwheels and open lawns, its real core is lost. What gives this place weight is injury, separation, waiting, and an unquiet desire for freedom."
   },
   "knowledge": {
     "title": "Imjingak's History & Origins",
+    "storyDeckTitle": "Historical Story Cards",
+    "storyDeckSubtitle": "Read the Iron Horse, Mangbaedan, Freedom Bridge, and Wind Hill together, and Imjingak becomes less a collection of viewpoints than a walkable archive of border memory.",
+    "storyBoxes": [
+      {
+        "eyebrow": "Historic Relic · Jangdan Station Steam Locomotive",
+        "title": "The 'Iron Horse' with 1,020 bullet holes",
+        "intro": "On 31 December 1950, engineer Han Jun-ki drove a Mater 2-10 steam locomotive loaded with military supplies southward in retreat. At Jangdan Station, he discovered that the track ahead had been destroyed and the route behind was cut off.",
+        "items": [
+          "To prevent the locomotive and its cargo from being captured, Allied forces destroyed and detonated it. The steel wreck remained in the grasslands of the DMZ for decades.",
+          "In 2004, the South Korean government recovered the locomotive from inside the DMZ and transferred it to Imjingak for chemical preservation and public display.",
+          "The phrase painted on its side, 'The Iron Horse Wants to Run Again', turns national division into a single frozen image: a machine built for movement, forced into permanent stillness."
+        ],
+        "closing": "It is not simply a war relic, but one of the clearest witnesses to a history that never fully moved on."
+      },
+      {
+        "eyebrow": "Separated-Family Memory · Mangbaedan Altar",
+        "title": "Silent grief at Mangbaedan",
+        "intro": "Built in 1985, Mangbaedan is one of the closest publicly accessible ritual sites from which ordinary South Koreans can face north without special permission.",
+        "items": [
+          "For decades, separated families have gathered here during Seollal and Chuseok, setting out memorial offerings and bowing toward hometowns they can no longer reach.",
+          "For many visitors, Mangbaedan is not symbolic in an abstract sense. It is as close as they will ever come to home again.",
+          "The granite reliefs behind the altar, depicting scenes of the northern provinces, function less as decoration than as a stone map of unfinished return."
+        ],
+        "closing": "Its emotional gravity lies not in the structure itself, but in a waiting that history never allowed to end."
+      },
+      {
+        "eyebrow": "Historic Site · Freedom Bridge",
+        "title": "The moment of throwing off prison clothes",
+        "intro": "After the 1953 Korean War Armistice, a temporary one-way wooden bridge about 83 meters long was erected beside the destroyed railway crossing for prisoner exchange.",
+        "items": [
+          "Around 12,773 South Korean and UN prisoners of war crossed here back to the South. 'Freedom Bridge' is not a poetic nickname but the record of a specific historical passage.",
+          "Accounts describe returning POWs removing the prison uniforms issued in northern camps, throwing them into the Imjin River, and shouting in celebration as they crossed south.",
+          "That is why the bridge remains more than a photo stop: it condenses bodily release, political symbolism, and emotional return into one memorial scene."
+        ],
+        "closing": "To stand before it is to confront a crossing that was once felt with the full weight of the body."
+      },
+      {
+        "eyebrow": "Art Landscape · Wind Hill",
+        "title": "3,000 pinwheels and a borderless wind",
+        "intro": "Wind Hill's signature installation of 3,000 pinwheels, created by artist Choi Pyung-gon for the 2005 World Peace Festival, is often interpreted as an allusion to the 'three thousand ri' of the Korean Peninsula.",
+        "items": [
+          "The pinwheels matter not only because they are beautiful, but because they translate a heavy historical site into a public image of peace that can be immediately understood.",
+          "The idea that 'wind has no border' gives the installation its deeper force. In a frontier landscape shaped by fences and control lines, the wind becomes a gentle refusal of division.",
+          "When thousands of pinwheels rotate at once in the river wind, the effect is not festival spectacle alone, but a visible structure of collective wishing."
+        ],
+        "closing": "Wind Hill is therefore both the color of Imjingak and one of its softest historical languages."
+      }
+    ],
     "sections": [
       {
         "id": "history",
         "title": "Founding intent: built for separated families",
-        "content": "Imjingak was established in 1972 to hold the longings of families separated by the 38th parallel after the Korean War. With many families cut off from the North and out of contact, Imjingak — the closest public memorial to the North — became a symbolic space where people gazed toward their hometowns and placed hopes for reunion."
+        "content": "Imjingak was established in 1972 not as an entertainment venue, but as a public place where families separated by war could face north and hold on to memory. That origin still matters: even today's lawns, walkways, and pinwheels rest on an emotional ground shaped by loss, distance, and suspended return."
       },
       {
         "id": "name",
         "title": "The name 'Imjingak': a pavilion by the Imjin River",
-        "content": "'Imjin' comes from the Imjin River, and 'gak' means a riverside pavilion-style memorial. The park's name hides both the river's geography and a character that faces north and keeps silent watch. It is both a park and a memorial site carrying national memory."
+        "content": "'Imjin' comes from the Imjin River, while 'gak' refers to a pavilion-like memorial structure by the water. The name quietly defines the site as both a real riverside geography and a platform of looking northward, where landscape and national memory overlap."
       },
       {
         "id": "dmz",
         "title": "Next to the DMZ: south of the line",
-        "content": "Imjingak sits just south of the Military Demarcation Line (DMZ) — one of the closest points where ordinary Koreans can gaze toward the North. This special location lifts Imjingak beyond an ordinary park into a living classroom for understanding division and peace."
+        "content": "Imjingak lies close to the Military Demarcation Line, making it one of the few places where the politics of division remain spatially legible to the public. Here, the border is not an abstraction found only in books; it is read through riverbanks, fences, bridges, and the short distance separating everyday South Korea from the unresolved frontier."
       },
       {
         "id": "windhill",
-        "title": "Wind Hill: thousands of colorful pinwheels",
-        "content": "The park's signature Wind Hill is made of thousands of colorful pinwheels turning like a colorful sea in the wind. Originally a folk art installation praying for peace, it is now Imjingak's most photogenic spot, adding a layer of lightness and hope to a solemn memorial theme."
+        "title": "Wind Hill: peace made visible",
+        "content": "Wind Hill is the most photographed part of Imjingak, yet its importance lies beyond imageability. By making wind visible through rotation, the pinwheels turn a large political wish into an everyday, legible, public landscape. They soften the site without emptying it of historical seriousness."
       },
       {
         "id": "bell",
         "title": "Peace Bell: ring for wishes",
-        "content": "The park's Peace Bell lets visitors ring for peace and reunification of the Korean Peninsula. The bell's sound echoes over the Imjin River, linking personal wishes with collective national memory — one of Imjingak's most ritual experiences."
+        "content": "The Peace Bell derives its force less from scale than from ritual. To ring it is to place a personal wish inside a larger historical field: one visitor may pray for a peaceful journey, another for reunification, another simply that war not return. In that sense, the bell gathers private emotion into a shared civic act."
       },
       {
         "id": "bridge",
         "title": "Freedom Bridge: where POWs returned",
-        "content": "Freedom Bridge (Jayu Bridge) is where about 13,000 POWs returned south after the 1953 Korean War Armistice. Its name expresses the longing for freedom and reunion; preserved as a historic memorial, it reminds visitors of the preciousness of peace."
+        "content": "Freedom Bridge matters because 'freedom' here was once experienced physically, step by step. About 12,773 South Korean and UN prisoners of war crossed back to the South after the armistice. The bridge remains powerful because it records not an abstract principle, but a bodily return from captivity."
       },
       {
         "id": "abduction",
         "title": "National Memorial Museum of the Abductees",
-        "content": "Inside the Imjingak area, the National Memorial Museum of the Abductees in the Korean War (6·25) is run by Korea's Ministry of Unification, displaying historical archives, relics and memorial information about those abducted during the Korean War — an important place to understand this history."
+        "content": "The National Memorial Museum of the Abductees in the Korean War, located within the wider Imjingak area, extends the site's historical frame beyond front lines alone. Its archives and exhibitions remind visitors that the human cost of division also includes abduction, disappearance, family rupture, and grief carried across generations."
       },
       {
         "id": "gondola",
         "title": "Peace Gondola: across the Imjin River",
-        "content": "The Paju Imjingak Peace Gondola crosses the Imjin River into the DMZ control zone, overlooking the demarcation line and Imjin River scenery. It upgrades Imjingak from 'gazing from afar' to an official experience 'approaching' the DMZ, and is the most popular deep-tour option in recent years."
+        "content": "The Peace Gondola changes the experience of Imjingak from distant observation to controlled approach. By crossing the Imjin River into a more tightly managed frontier zone, it makes clear how tourism, security, geography, and memory are layered together in this border landscape."
       }
     ],
     "didYouKnow": {
       "title": "Did you know?",
-      "text": "Imjingak is not just a park but a memorial where Koreans place hopes for peace and reunification — from its 1972 founding for separated families to the pinwheels, Peace Bell and Freedom Bridge, land and national memory are written into the same Imjin River fields."
+      "text": "What makes Imjingak unusual is not any single monument, but the way separated-family memory, war damage, ritual space, public art, and open green landscape occupy the same ground. Every quiet walk here takes place inside an unfinished history."
     }
   },
   "sitePlaques": {
@@ -536,14 +610,34 @@
     "terms": "Terms of Service",
     "cookies": "Cookie Settings",
     "officialResourcesTitle": "Official & Reference Resources",
+    "officialResourcesIntro": "This page links only to Korean government or semi-official public institutions, avoiding commercial referral patterns and keeping the reference system clear, restrained, and trustworthy.",
     "mapsLabel": "Google Maps →",
     "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9",
     "officialLinksList": [
-      { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://chinese.visitkorea.or.kr" },
-      { "name": "Gyeonggi DMZ Tourism Portal", "url": "https://dmz.ggtour.or.kr" },
-      { "name": "Paju Culture & Tourism", "url": "https://tour.paju.go.kr" },
-      { "name": "Paju Imjingak Peace Gondola", "url": "http://www.dmzgondola.com" },
-      { "name": "National Memorial Museum of the Abductees (6·25)", "url": "https://www.abduction.go.kr" }
+      {
+        "name": "DMZ Border Tourism Reservation System",
+        "url": "https://dmz.paju.go.kr",
+        "institution": "Paju City Government",
+        "description": "Official source for reservation and visitor information related to Paju's DMZ tourism programs."
+      },
+      {
+        "name": "Imjingak & DMZ Official Portal",
+        "url": "https://ggtour.or.kr/dmz/",
+        "institution": "Gyeonggi Tourism Organization",
+        "description": "Public portal covering DMZ destinations in Gyeonggi-do, including Imjingak and related interpretation resources."
+      },
+      {
+        "name": "National Memorial Museum of the Abductees in the Korean War",
+        "url": "https://www.abductions625.go.kr",
+        "institution": "Affiliated with the Ministry of Unification",
+        "description": "Official museum information, exhibitions, and educational material related to abductees and wartime family rupture."
+      },
+      {
+        "name": "Accessible Tourism Information System",
+        "url": "https://access.visitkorea.or.kr",
+        "institution": "Korea Tourism Organization",
+        "description": "Public accessibility guide useful for travelers planning visits with seniors, wheelchairs, or family groups."
+      }
     ],
     "disclaimer": "This website is an independent non-profit visitor information project. We are affiliated with no government agency or official organization.",
     "dataSource": "All historical background and park data referenced on this site are cross-checked against public materials from the Korea Tourism Organization (VISITKOREA), the Gyeonggi Tourism Organization and Paju City, with no commercial recommendations.",
