@@ -1,0 +1,832 @@
+{
+  "meta": {
+    "title": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) | Paju, Gyeonggi-do · Korea's Iconic Peace Park by the DMZ",
+    "description": "The complete guide to Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원): a vast green peace park in Paju, Gyeonggi-do, right beside the Military Demarcation Line, built to pray for peace and reunification of the Korean Peninsula. It features the iconic Wind Hill (thousands of colorful pinwheels), the Peace Bell, Freedom Bridge, and lawns displaying war relics and peace art installations. Opening hours, how to get there, history, photo spots and visitor reviews — all in one place."
+  },
+  "header": {
+    "siteName": "Imjingak Pyeonghwa Nuri Park",
+    "home": "Home",
+    "visit": "Visit",
+    "transport": "Getting There",
+    "lodging": "Stay",
+    "history": "History",
+    "gallery": "Gallery",
+    "reviews": "Reviews",
+    "faq": "FAQ",
+    "map": "Map",
+    "backToHome": "Back to Home"
+  },
+  "common": {
+    "changeLanguage": "Change language",
+    "toggleTheme": "Toggle theme"
+  },
+  "nonprofitBanner": {
+    "text": "This is an independent, non-profit guide compiled by travel enthusiasts to provide the most objective information about visiting Imjingak Pyeonghwa Nuri Park. It is free, and we are affiliated with no organization.",
+    "dataSource": "All historical background and park data on this site are cross-checked against public materials from the Korea Tourism Organization (VISITKOREA), the Gyeonggi Tourism Organization and Paju City, with no commercial recommendations."
+  },
+  "mission": {
+    "title": "Our Mission",
+    "text": "So that every traveler visiting Paju can experience this green space built for peace and reunification, we have organized scattered official information into this guide — only to give you the purest open field, pinwheels and moments of reflection."
+  },
+  "breadcrumb": {
+    "home": "Home",
+    "region": "Gyeonggi-do",
+    "city": "Paju",
+    "current": "Imjingak Pyeonghwa Nuri Park"
+  },
+  "stickyNav": {
+    "facts": "Key Facts",
+    "etiquette": "Park Etiquette",
+    "route": "Half-Day Route",
+    "transport": "Getting There",
+    "lodging": "Stay",
+    "visit": "Visit Tips",
+    "faq": "FAQ"
+  },
+  "hero": {
+    "title": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원)",
+    "subtitle": "A vast green peace park in Paju, Gyeonggi-do, right beside the Military Demarcation Line, built to pray for peace and reunification of the Korean Peninsula. Its iconic Wind Hill — thousands of colorful pinwheels — along with the Peace Bell, Freedom Bridge and lawns displaying war relics and peace art installations, form a cultural landmark for looking back at history and offering hopes for peace.",
+    "rating": "4.4 (7,477)",
+    "reviewCount": "7,477 reviews",
+    "hours": "Open 24 hours (public park area)",
+    "openMaps": "View location on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9",
+    "tags": ["Peace theme park", "Wind Hill pinwheels", "Free · public green space"],
+    "routeCta": {
+      "label": "Plan your route",
+      "href": "#transport"
+    },
+    "historyCta": {
+      "label": "Learn its story",
+      "href": "#history"
+    },
+    "quickFacts": [
+      { "icon": "🕊️", "label": "Highlights", "value": "Wind Hill" },
+      { "icon": "🆓", "label": "Admission", "value": "Free" },
+      { "icon": "🕐", "label": "Open", "value": "24 hours" }
+    ],
+    "navCta": { "label": "📍 Navigate", "href": "#transport" },
+    "photoCta": { "label": "📸 Photo spots", "href": "#gallery" },
+    "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" },
+    "sunsetPlanner": {
+      "eyebrow": "Golden Hour Calculator · Light Tool",
+      "title": "Based on today's sunset, we suggest arriving about 60 minutes earlier to catch both the softest diffuse light and the blue-hour sky — ideal for photographing the colorful pinwheels of Wind Hill and the silhouette of the Peace Bell.",
+      "note": "The park is open and unobstructed; light is warmest from afternoon to dusk. On peak weekends and holidays, allow extra time to avoid the crowds.",
+      "seaGlare": "Open-ground glare note: Imjingak sits on flat open fields by the Imjin River. Afternoon to dusk gives the best front light, with the clearest detail on the pinwheels and Peace Bell; early-morning river mist is best for quiet, ethereal wide shots.",
+      "arriveLabel": "Suggested arrival",
+      "blueHourLabel": "Blue hour",
+      "lightCaption": "Light calculated live by Open-Meteo"
+    }
+  },
+  "quickFactsDashboard": {
+    "title": "Imjingak at a Glance · Data Board",
+    "subtitle": "A few numbers to understand this green space by the Imjin River, built for peace and reunification.",
+    "items": [
+      { "icon": "🕊️", "label": "Founded / Founded", "value": "1972", "note": "Built in 1972 to hold the longings of separated families for relatives in the North and to pray for peace and reunification — one of Korea's most representative peace parks." },
+      { "icon": "🎡", "label": "Wind Hill / Wind Hill", "value": "Thousands of pinwheels", "note": "The park's signature Wind Hill is made of thousands of colorful pinwheels that turn like a colorful sea in the wind — Imjingak's most photogenic spot." },
+      { "icon": "🔔", "label": "Peace Bell / Peace Bell", "value": "Bell of wishes", "note": "The park has a Peace Bell visitors can ring to pray for peace; the bell and its setting form a quiet, solemn memorial space." },
+      { "icon": "🌉", "label": "Freedom Bridge / Freedom Bridge", "value": "POW return site", "note": "After the 1953 Korean War Armistice, about 13,000 POWs returned south across this bridge; its name expresses the longing for freedom and reunion." },
+      { "icon": "📍", "label": "Location / Location", "value": "37°53′N, 126°45′E", "note": "Plus Code: VPRV+V6 Paju. At 148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do, just south of the DMZ." },
+      { "icon": "🚠", "label": "Nearby / Nearby", "value": "Peace Gondola", "note": "The Paju Imjingak Peace Gondola crosses the Imjin River into the DMZ control zone, overlooking the demarcation line and Imjin River — an official deep-DMZ experience." }
+    ]
+  },
+  "hiddenRules": {
+    "title": "Safety Tips Near the Military Zone",
+    "subtitle": "Although Imjingak is an open park, it sits right next to the Demilitarized Zone (DMZ) and the Military Demarcation Line. Think about IDs, controls and safety, and the experience upgrades from 'rushing check-ins' to 'relaxed, safe play'.",
+    "highlights": [
+      { "icon": "🪪", "label": "Bring ID", "value": "Carry your passport", "note": "Deep-DMZ experiences (such as the Peace Gondola or Peace Train Station) may require on-site passport registration. Bring valid ID when you go." },
+      { "icon": "🚧", "label": "Controlled areas", "value": "Do not cross", "note": "The park is next to the Military Demarcation Line. Follow signs and fences strictly; do not enter closed or military-controlled areas or climb railings." },
+      { "icon": "🚁", "label": "Airspace limits", "value": "No drones", "note": "Near the military zone, drones are usually banned over the park and DMZ. Respect local airspace and filming restrictions." }
+    ],
+    "panels": [
+      {
+        "q": "Do I need a passport to enter Imjingak?",
+        "a": "The public park area is free to enter without a passport. But deep-DMZ experiences such as the Peace Gondola or Peace Train Station that cross the Imjin River into the DMZ usually require on-site passport registration. Bring it along.",
+        "items": ["The public green area is open 24 hours, anytime.", "Deep-DMZ experiences follow official same-day rules; check ahead."]
+      },
+      {
+        "q": "Why be careful about military control and fences?",
+        "a": "Imjingak is next to the Military Demarcation Line, and some areas are military-controlled. Even when it looks calm, you may be near sensitive ground. Follow on-site guidance, do not enter closed zones — both for your safety and to respect the memorial meaning of this land."
+      },
+      {
+        "q": "Can I light a fire or set off fireworks in the park?",
+        "a": "No. Near the military zone, open fires and private fireworks are strictly prohibited in the public green space. Follow on-site staff and stay in designated areas."
+      }
+    ]
+  },
+  "complianceGuide": {
+    "title": "Imjingak · Park Etiquette & Public Environment Guide",
+    "subtitle": "This is both a visitor's park and a memorial where Koreans place their hopes for peace and reunification. Following these rules is respect for history and for others.",
+    "rules": [
+      {
+        "badge": "🚮",
+        "title": "Take your trash with you",
+        "text": "Park bins are limited and the open field is windy, scattering litter. Bring a small bag and take everything away, especially cigarette butts, plastics and food waste."
+      },
+      {
+        "badge": "🔇",
+        "title": "Enjoy quietly",
+        "text": "Many come specifically to offer hopes for peace and separated families. Lower your voice and don't blast music, leaving the calm to the field and the bell."
+      },
+      {
+        "badge": "🚭",
+        "title": "No smoking & fire-free",
+        "text": "Near the military zone, the whole area is smoke-free and open flames are banned; be especially careful with fire on lawns and wooden facilities."
+      },
+      {
+        "badge": "🕊️",
+        "title": "Respect the memorial",
+        "text": "The Peace Bell, Freedom Bridge and memorial installations carry real history. Do not climb, carve or behave inappropriately; keep the memorial space solemn."
+      }
+    ]
+  },
+  "higashiyamaRoute": {
+    "title": "Custom Itinerary: Imjingak Half-Day Loop",
+    "subtitle": "Not just 'who it suits', but a walkable half-day route. Centered on Wind Hill, it links the Peace Bell, Freedom Bridge and the park's memorial hall.",
+    "steps": [
+      { "title": "[Start] Wind Hill & the pinwheel sea", "meta": "Core experience · ~40 min", "text": "First be surrounded by thousands of colorful pinwheels on the open Wind Hill, photograph and unwind in the Imjin River breeze, leaving the soft morning or dusk light for this place of peace.", "tips": ["Wind Hill is open and unobstructed; morning and dusk light are best."] },
+      { "title": "[Main] Peace Bell & wishes", "meta": "Memorial experience · ~30 min", "text": "Walk along the path to the Peace Bell, ring it or stand in silent wish, and understand Imjingak's original intent as a symbol of peace and reunification.", "tips": ["The bell area is solemn; lower your voice and avoid running."] },
+      { "title": "[Extend] Freedom Bridge & history trail", "meta": "Historic site · ~40 min", "text": "Walk to Freedom Bridge and learn how about 13,000 POWs returned south in 1953, weaving war memory and peace wishes into one experience.", "tips": ["The bridge is a memorial facility; follow the designated path and do not climb railings."] },
+      { "title": "[Supply] Lawn & art installations", "meta": "Rest & supply · ~40 min", "text": "Stroll and picnic (take your trash) on the lawn displaying war relics and peace art installations, feeling history and contemporary art together.", "tips": ["The open lawn suits slow family visits."] },
+      { "title": "[End] Peace Gondola or return", "meta": "Wrap · ~60 min+", "text": "If time allows and IDs are ready, experience the Peace Gondola crossing the Imjin River into the DMZ; otherwise take a bus / taxi back, completing a 'pinwheels + bell + history' half-day package.", "tips": ["The gondola requires passport registration; confirm same-day operation ahead."] }
+    ],
+    "disclaimer": "The route emphasizes a closed loop that 'works even if you just follow it'; if you only want the pinwheels, keep the first two segments and treat the gondola and hall as flexible add-ons."
+  },
+  "intro": {
+    "title": "Getting to Know Imjingak Pyeonghwa Nuri Park",
+    "description": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) lies in Munsan-eup, Paju-si, Gyeonggi-do, by the Imjin River and just south of the Military Demarcation Line (DMZ) — a vast green peace park built to pray for peace and reunification of the Korean Peninsula. Established in 1972 to hold the longings of separated families for relatives in the North, it is now both a relaxing public space for citizens and an important cultural landmark to feel the history of division and the Korean War up close. Its signature Wind Hill — thousands of colorful pinwheels — is a perfect photo spot; the Peace Bell, Freedom Bridge, and lawns displaying war relics and peace art installations together form an open space for looking back at history and offering hopes for peace.",
+    "visitGuide": {
+      "title": "Visit Guide",
+      "eyebrow": "Practical Planning",
+      "description": "Imjingak is a free, open public green space with no gate and no reservation; the public area is accessible 24 hours. The ideal approach is usually not 'wander by day' but reverse-planning around light: come at dawn or dusk for the best light on Wind Hill, and prefer weekdays for quiet reflection. Facilities are restrained and commercial feel is low — which is exactly its charm.",
+      "items": [
+        "Best at dawn or dusk: the Imjin River light is softest then, and pinwheels with the Peace Bell frame best.",
+        "Best viewpoints are the high point of Wind Hill and the Peace Bell plaza.",
+        "About a 10–15 min walk from Imjingang Station to the main sights.",
+        "Almost no commercial supply in the park; water, restrooms and breaks are better at the entrance or nearby."
+      ]
+    },
+    "alsoKnownAs": {
+      "title": "Highlights",
+      "items": [
+        "Wind Hill of thousands of colorful pinwheels — Imjingak's most photogenic spot",
+        "The Peace Bell you can ring to pray for peace and reunification",
+        "Freedom Bridge (1953 POW return) carrying real war and reunion memory",
+        "Open lawn displaying war relics and peace art — history meets art",
+        "Next to the DMZ, linkable with the Peace Gondola and Third Infiltration Tunnel"
+      ]
+    }
+  },
+  "transportSection": {
+    "title": "Transportation & Getting Here",
+    "subtitle": "Combine arriving in Paju, city transfers, walking/cycling, parking and charging into one clear structure for planning your Imjingak trip.",
+    "overviewTitle": "After arriving in Paju",
+    "overviewText": "Imjingak Pyeonghwa Nuri Park is at 148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do, next to the DMZ and a representative peace park of Paju. The easiest long-distance option is the Gyeongui-Jungang Line from Seoul to Imjingang Station, about 1 hour; once in the park, Imjingang Station is about a 10–15 min walk to the main sights. Imjingak is an open public green space, reachable on foot from the station.",
+    "overviewText2": "Imjingak is open parkland with no gate. Plan transport, parking and walking together — especially with seniors, children or luggage, parking at a public lot then walking in saves a lot of hassle.",
+    "arrivalTitle": "Remember before departure",
+    "arrivalItems": [
+      "Imjingak is in Munsan-eup, Paju; about a 10–15 min walk from Imjingang Station to the main sights.",
+      "Several public parking lots surround the park; they fill fast on peak weekends — arrive early or prefer transit.",
+      "Crowds are higher on weekends and holidays; strongly prefer public transit or off-peak visits. Bring your passport for DMZ experiences."
+    ],
+    "modes": [
+      {
+        "label": "Train (Gyeongui-Jungang Line · Imjingang Stn)",
+        "icon": "🚆",
+        "title": "Train direct to Imjingang Station",
+        "description": "Easiest for most travelers; from Seoul take the Gyeongui-Jungang Line to Imjingang Station — the classic way to Imjingak.",
+        "details": [
+          "From Seoul take the Gyeongui-Jungang Line to Imjingang Station (Imjingang Station), about 1 hour.",
+          "Imjingang is a dedicated Imjingak station; a 10–15 min walk from the platform to the park.",
+          "Use T-money / transport card for easy bus and taxi connections."
+        ],
+        "steps": [
+          { "n": "1", "t": "Take the Gyeongui-Jungang Line to Imjingang Station." },
+          { "n": "2", "t": "Walk along park signs about 10–15 min." },
+          { "n": "3", "t": "Reach Wind Hill and the Peace Bell." }
+        ]
+      },
+      {
+        "label": "Public transit (intercity bus / transfer)",
+        "icon": "🚌",
+        "title": "Seoul etc. transfer to Paju",
+        "description": "Convenient for most; take an express / intercity bus to Paju or Munsan, then transfer to a city bus or taxi to Imjingak.",
+        "details": [
+          "From Seoul take a bus to Paju / Munsan Intercity Terminal, about 1–1.5 hours.",
+          "After arriving, transfer to a city bus or taxi to Imjingak.",
+          "Buses accept T-money; use a map app for real-time arrivals."
+        ],
+        "steps": [
+          { "n": "1", "t": "Take express / intercity bus to Paju or Munsan." },
+          { "n": "2", "t": "Transfer to city bus or taxi to Imjingak." },
+          { "n": "3", "t": "Walk from the entrance into the park." }
+        ]
+      },
+      {
+        "label": "Imjingang Station (walk 10–15 min)",
+        "icon": "🚉",
+        "title": "Nearest station, hidden option",
+        "description": "Imjingang Station is the closest station to Imjingak; a 10–15 min walk reaches Wind Hill — best for light packers who want to see it first.",
+        "details": [
+          "Imjingang is a small dedicated station; some trains stop, check schedules ahead.",
+          "From the platform, follow park signs about 10–15 min to the main sights.",
+          "Dawn and weekdays are best to avoid Seoul-side transfer crowds."
+        ],
+        "steps": [
+          { "n": "1", "t": "Alight at Imjingang Station by train." },
+          { "n": "2", "t": "Walk along park signs about 10–15 min." },
+          { "n": "3", "t": "Reach Wind Hill and the Peace Bell." }
+        ]
+      },
+      {
+        "label": "Driving (parking / charging)",
+        "icon": "🅿️",
+        "title": "Via highway · nearby parking",
+        "description": "Good with children, seniors, lots of luggage or a Gyeonggi tour; several public lots surround the park.",
+        "details": [
+          "Set destination to '임진각 평화누리공원' or address '경기도 파주시 문산읍 임진각로 148-40'.",
+          "Park public lots are free or low-cost, but fill on peak weekends.",
+          "Some public lots have EV chargers; open field is windy, mind crosswinds and parking."
+        ],
+        "steps": [
+          { "n": "1", "t": "Navigate to 'Imjingak Pyeonghwa Nuri Park'." },
+          { "n": "2", "t": "Park in a public / paid lot, walk in." },
+          { "n": "3", "t": "Avoid the 10:00–18:00 peak to save parking time." }
+        ]
+      },
+      {
+        "label": "Taxi / ride-hail",
+        "icon": "🚕",
+        "title": "Door-to-door",
+        "description": "Easiest with luggage, children/seniors or early / late arrivals.",
+        "details": [
+          "Taxi from Munsan or Paju city to Imjingak about 15–25 min, meter based.",
+          "Walk from the park entrance into the park.",
+          "Taxis queue on peak days; reserve via a local app (e.g. Kakao T)."
+        ],
+        "steps": [
+          { "n": "1", "t": "Call a car via Kakao T etc." },
+          { "n": "2", "t": "Tell the driver '임진각 평화누리공원'." },
+          { "n": "3", "t": "Alight at the park entrance, walk in." }
+        ]
+      },
+      {
+        "label": "Cycling / walking",
+        "icon": "🚲",
+        "title": "Park greenway & field stroll",
+        "description": "The most relaxing way to feel the Imjin River fields and pinwheels.",
+        "details": [
+          "The park is flat; walk to link Wind Hill, Peace Bell and Freedom Bridge.",
+          "Park bikes at the racks; no riding on lawns or memorial areas.",
+          "About a 10–15 min walk from Imjingang Station to Wind Hill, open fields throughout."
+        ],
+        "steps": [
+          { "n": "1", "t": "Stroll the river or rent a public bike near the station / park." },
+          { "n": "2", "t": "Walk the greenway toward Wind Hill." },
+          { "n": "3", "t": "Lock the bike at the bell plaza, walk to visit." }
+        ]
+      },
+      {
+        "label": "Walking (neighborhood roam)",
+        "icon": "🚶",
+        "title": "From parking to park",
+        "description": "If already in Munsan or near the park, walking is the natural way to observe the field and memorial space.",
+        "details": [
+          "About a 3–10 min walk from surrounding public lots to the main sights.",
+          "Pass fields, green space and memorial installations along the way.",
+          "Lawns have slight slopes; wear comfortable shoes and watch children."
+        ]
+      }
+    ],
+    "parking": {
+      "title": "Parking & Charging Overview",
+      "note": "Several public parking lots surround Imjingak; below are the nearest main options. Rates and availability vary by season and time — follow on-site signs.",
+      "colOption": "Option",
+      "colDistance": "Distance",
+      "colPrice": "Price",
+      "options": [
+        { "name": "Imjingak public parking", "distance": "about 100–300 m (to Wind Hill)", "price": "Public free or low-cost, fills in peak" },
+        { "name": "Peace Gondola parking", "distance": "about 300–500 m", "price": "Park annex parking, more spaces but tight in peak" },
+        { "name": "Surrounding street parking", "distance": "about 200–500 m", "price": "Roadside / small lots, few spaces, easier off-peak" },
+        { "name": "Munsan city parking", "distance": "about 3–5 km", "price": "City / mall parking, tight on holidays" },
+        { "name": "Drop-off (park entrance)", "distance": "about 100 m", "price": "Short stop only, no spaces" }
+      ],
+      "disclaimer": "Park roads are extremely congested on holidays and peak season; do not block bus and fire lanes. EV chargers are common at park public lots and the Peace Gondola lot; rates and limits may change — check posted signs."
+    },
+    "driverFaqTitle": "Transport Q&A",
+    "driverFaq": [
+      { "q": "Is there parking near Imjingak?", "a": "Several public lots surround the park, such as Imjingak public parking and Peace Gondola parking, within walking distance. They fill fast on peak weekends — arrive early or park further out and walk the last stretch." },
+      { "q": "What is the nearest parking?", "a": "Imjingak public parking is about 100–300 m away, the closest to Wind Hill; Peace Gondola parking is about 300–500 m, more spaces but tight in peak." },
+      { "q": "Is there roadside parking nearby?", "a": "Very little. Park roads are narrow and congested on holidays; use proper lots and public transit, no long roadside parking." },
+      { "q": "Is driving recommended for Imjingak?", "a": "Unless parking is essential, driving is not advised. Weekends and peak season are very congested; walking or transit is smoother. If driving, park at a surrounding lot then walk in." },
+      { "q": "Do you recommend public transit?", "a": "Strongly. Take the Gyeongui-Jungang Line to Imjingang Station, then walk about 10–15 min to the park. Address: 148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do, South Korea." },
+      { "q": "What is the best way to get here?", "a": "For stability and ease, transit is still best: Gyeongui-Jungang Line to Imjingang Station, walk in. If you must drive, treat parking and transfer as part of the trip, not 'park at the door'." }
+    ],
+    "localTipsTitle": "Practical tips",
+    "localTips": [
+      "Dawn and dusk remain the golden windows, but set your baseline as 'arrive 60 min before sunset' — best for pinwheels and the Peace Bell.",
+      "Crowds are high on weekends and summer break; allow buffer and off-peak time with kids or gear.",
+      "Imjingak pairs best with the Peace Gondola, Third Tunnel and Dora Observatory; a single stop underestimates its historical value."
+    ],
+    "mapsCta": "View map & route",
+    "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9",
+    "bestTime": {
+      "title": "Best time to arrive",
+      "text": "Imjingak is accessible all day, but the photo ceiling is the dawn and dusk light window. Arrive about 60 min before sunset; if weather is poor for photos, shift focus to the Peace Gondola, the park memorial hall or nearby Heyri Art Village."
+    }
+  },
+  "officialManagement": {
+    "title": "About This Green Space",
+    "text": "Imjingak Pyeonghwa Nuri Park lies in Munsan-eup, Paju-si, Gyeonggi-do, by the Imjin River, a peace memorial green space grown from former open fields along the Imjin River, maintained as public space by Paju City and Gyeonggi-do. It has long been an open place for citizens' strolls, travelers' gazing at the demarcation line and shared wishes for peace, and is one of Paju's city cards as the 'City of Peace and Memory'."
+  },
+  "humanities": {
+    "title": "Humanities & Peace Theme Research",
+    "subtitle": "Put the separated-families past, the founding intent, and the memory of the Peace Bell and Freedom Bridge on one timeline to truly understand why this green space is more than 'a pretty park'."
+  },
+  "knowledge": {
+    "title": "Imjingak's History & Origins",
+    "sections": [
+      {
+        "id": "history",
+        "title": "Founding intent: built for separated families",
+        "content": "Imjingak was established in 1972 to hold the longings of families separated by the 38th parallel after the Korean War. With many families cut off from the North and out of contact, Imjingak — the closest public memorial to the North — became a symbolic space where people gazed toward their hometowns and placed hopes for reunion."
+      },
+      {
+        "id": "name",
+        "title": "The name 'Imjingak': a pavilion by the Imjin River",
+        "content": "'Imjin' comes from the Imjin River, and 'gak' means a riverside pavilion-style memorial. The park's name hides both the river's geography and a character that faces north and keeps silent watch. It is both a park and a memorial site carrying national memory."
+      },
+      {
+        "id": "dmz",
+        "title": "Next to the DMZ: south of the line",
+        "content": "Imjingak sits just south of the Military Demarcation Line (DMZ) — one of the closest points where ordinary Koreans can gaze toward the North. This special location lifts Imjingak beyond an ordinary park into a living classroom for understanding division and peace."
+      },
+      {
+        "id": "windhill",
+        "title": "Wind Hill: thousands of colorful pinwheels",
+        "content": "The park's signature Wind Hill is made of thousands of colorful pinwheels turning like a colorful sea in the wind. Originally a folk art installation praying for peace, it is now Imjingak's most photogenic spot, adding a layer of lightness and hope to a solemn memorial theme."
+      },
+      {
+        "id": "bell",
+        "title": "Peace Bell: ring for wishes",
+        "content": "The park's Peace Bell lets visitors ring for peace and reunification of the Korean Peninsula. The bell's sound echoes over the Imjin River, linking personal wishes with collective national memory — one of Imjingak's most ritual experiences."
+      },
+      {
+        "id": "bridge",
+        "title": "Freedom Bridge: where POWs returned",
+        "content": "Freedom Bridge (Jayu Bridge) is where about 13,000 POWs returned south after the 1953 Korean War Armistice. Its name expresses the longing for freedom and reunion; preserved as a historic memorial, it reminds visitors of the preciousness of peace."
+      },
+      {
+        "id": "abduction",
+        "title": "National Memorial Museum of the Abductees",
+        "content": "Inside the Imjingak area, the National Memorial Museum of the Abductees in the Korean War (6·25) is run by Korea's Ministry of Unification, displaying historical archives, relics and memorial information about those abducted during the Korean War — an important place to understand this history."
+      },
+      {
+        "id": "gondola",
+        "title": "Peace Gondola: across the Imjin River",
+        "content": "The Paju Imjingak Peace Gondola crosses the Imjin River into the DMZ control zone, overlooking the demarcation line and Imjin River scenery. It upgrades Imjingak from 'gazing from afar' to an official experience 'approaching' the DMZ, and is the most popular deep-tour option in recent years."
+      }
+    ],
+    "didYouKnow": {
+      "title": "Did you know?",
+      "text": "Imjingak is not just a park but a memorial where Koreans place hopes for peace and reunification — from its 1972 founding for separated families to the pinwheels, Peace Bell and Freedom Bridge, land and national memory are written into the same Imjin River fields."
+    }
+  },
+  "sitePlaques": {
+    "title": "Reading the On-Site Signs",
+    "subtitle": "What's worth reading slowly on site is often not the photo badge, but the official signs explaining 'why this land is here'.",
+    "locationLabel": "Location",
+    "intro": "The readings below are based on Paju City and Gyeonggi's Imjingak introductions, peace-theme notes and DMZ guides, turning information visible on site but not always read closely into understandable English.",
+    "items": [
+      {
+        "id": "monument",
+        "badge": "Founding memorial sign",
+        "title": "Imjingak & separated families",
+        "koTitle": "임진각 건립 배경",
+        "koTitleZh": "Imjingak founding background",
+        "location": "Park main plaza",
+        "body": "These signs give the key background: founded in 1972 to hold separated families' longings for the North, and Imjingak's meaning as the closest public memorial to the North. Reading the signs is lesson one in using this memorial green space."
+      },
+      {
+        "id": "signboard",
+        "badge": "Peace theme note (KO/EN)",
+        "title": "Wind Hill & wishes",
+        "koTitle": "평화의 언덕 안내",
+        "koTitleZh": "Wind Hill guide",
+        "location": "Wind Hill entrance",
+        "body": "The signs stress Imjingak's status as a peace memorial and remind visitors that half the beauty of this field is the pinwheels, half is the real history underfoot. They explain clearly 'why so many pinwheels'."
+      },
+      {
+        "id": "wooden",
+        "badge": "Freedom Bridge guide",
+        "title": "Historic site of POW return",
+        "koTitle": "자유의 다리 안내",
+        "koTitleZh": "Freedom Bridge guide",
+        "location": "By Freedom Bridge",
+        "body": "The guide explains 'why this bridge is called Freedom'. In 1953 about 13,000 POWs returned south across it; the bridge is preserved as a memorial. Seeing it with Wind Hill, Imjingak's design logic is clear: light hope and heavy history coexist."
+      },
+      {
+        "id": "dongporu",
+        "badge": "DMZ & Peace Gondola marker",
+        "title": "Peace Gondola across the Imjin",
+        "koTitle": "임진각 평화 곤돌라",
+        "koTitleZh": "Imjingak Peace Gondola",
+        "location": "In front of the gondola station",
+        "body": "Erected by Paju City, marking the Peace Gondola as the official experience crossing the Imjin River into the DMZ. It reminds every visitor: this green space connects to the most sensitive yet most worth-gazing border of the Korean Peninsula."
+      }
+    ]
+  },
+  "gallery": {
+    "title": "Photo Gallery",
+    "subtitle": "From the colorful pinwheels of Wind Hill, the Peace Bell silhouette and Freedom Bridge to the open Imjin River fields — the visual beauty of Imjingak Pyeonghwa Nuri Park.",
+    "photoAlt": "Imjingak Pyeonghwa Nuri Park",
+    "photoAlts": [
+      "Panorama of Imjingak with thousands of colorful pinwheels turning over the Imjin River fields.",
+      "Quiet empty park at dawn, river mist best for slow wide shots.",
+      "Wind Hill in golden dusk light, pinwheels like a colorful sea.",
+      "Peace Bell close-up, solemn against the blue-hour sky.",
+      "Freedom Bridge, a memorial facility carrying POW-return history.",
+      "Overhead view of pinwheels, lawn and Imjin River as a peace landscape.",
+      "Lawn displaying war relics and peace art — history meets art.",
+      "Warm family stroll on the open lawn, good for slow family visits.",
+      "Blue-and-white memorial installation, echoing the peace theme palette.",
+      "Classic composition using pinwheels as a lead-in to field and skyline.",
+      "Wind Hill high viewpoint, one of Imjingak's most recognizable photo spots.",
+      "Riverbank railings and distant hills, gazing toward the North.",
+      "Warm dusk lawn, afterglow drawing golden glints on the grass.",
+      "Pinwheels and Peace Bell together, dawn to dusk best window.",
+      "Gondola and Imjin River as a border narrative.",
+      "High viewpoint capturing 'pinwheels – bell – river – border' in one frame.",
+      "Summer night park lights, Imjingak a quiet memorial at night.",
+      "Warm-toned park path, showing the public green gently embraced by the field.",
+      "Morning mist over the field, the riverside's occasional quiet at dawn.",
+      "Couples and independent travelers posing at Wind Hill.",
+      "Snowy quiet park, the riverside's occasional winter stillness.",
+      "Peace-theme memorial marker, telling the collective memory of peace wishes.",
+      "Lone tree and pinwheel field close-up against the blue sky.",
+      "Dawn backlight silhouette, pinwheels outlining a classic profile against the golden-red sky."
+    ],
+    "viewAll": "View location on Google Maps",
+    "showMore": "Show more photos",
+    "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9"
+  },
+  "reviews": {
+    "title": "Visitor Reviews",
+    "declaration": "Visitor feedback is available on Google Maps (external link).",
+    "featuredTitle": "Visitor Quotes",
+    "featuredSubtitle": "A few short lines that capture Imjingak's character.",
+    "moreReviews": "View on Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9",
+    "featured": [
+      {
+        "text": "Thousands of colorful pinwheels turning by the Imjin River — on one side light hope, on the other heavy history. So thoughtful.",
+        "source": "Independent traveler · Seoul"
+      },
+      {
+        "text": "A free, open peace park not far from Seoul yet calming — Paju's gentlest corner.",
+        "source": "Photographer · Gyeonggi-do"
+      },
+      {
+        "text": "With kids slowly along the lawn, Wind Hill surprised the little ones and was easy for seniors too.",
+        "source": "Family · Incheon"
+      }
+    ],
+    "items": [
+      {
+        "name": "Minjun",
+        "date": "May 2026",
+        "rating": 5,
+        "text": "Visited at dawn; the pinwheels are super photogenic in backlight, and the moment ringing the Peace Bell was silent — strongly recommend dusk, best light."
+      },
+      {
+        "name": "Seoyeon",
+        "date": "Apr 2026",
+        "rating": 5,
+        "text": "Wind Hill's composition is striking; the gentle entrance is family-friendly, riverside wind is strong so bring a jacket."
+      },
+      {
+        "name": "Jihoon",
+        "date": "Mar 2026",
+        "rating": 4,
+        "text": "Worth it as a free public green space; weekends get crowded, weekdays or early morning are more comfortable."
+      },
+      {
+        "name": "Ha-eun",
+        "date": "Feb 2026",
+        "rating": 5,
+        "text": "About a 10 min walk from Imjingang Station to Wind Hill; the open field along the way is pleasant, good for a half-day stroll."
+      }
+    ]
+  },
+  "mapSection": {
+    "title": "How to Get Here",
+    "subtitle": "148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do, South Korea (Plus Code: VPRV+V6)",
+    "openMaps": "Open in Google Maps",
+    "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9"
+  },
+  "footer": {
+    "siteName": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원)",
+    "rights": "© 2026 Imjingak Pyeonghwa Nuri Park Guide — an independent non-profit attraction information project. All rights reserved.",
+    "mission": {
+      "title": "Our Mission",
+      "text": "So that every traveler visiting Paju can experience this green space built for peace and reunification, we have organized scattered official information into this guide — only to give you the purest open field, pinwheels and moments of reflection."
+    },
+    "legalLinksTitle": "Privacy & Terms",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Service",
+    "cookies": "Cookie Settings",
+    "officialResourcesTitle": "Official & Reference Resources",
+    "mapsLabel": "Google Maps →",
+    "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9",
+    "officialLinksList": [
+      { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://chinese.visitkorea.or.kr" },
+      { "name": "Gyeonggi DMZ Tourism Portal", "url": "https://dmz.ggtour.or.kr" },
+      { "name": "Paju Culture & Tourism", "url": "https://tour.paju.go.kr" },
+      { "name": "Paju Imjingak Peace Gondola", "url": "http://www.dmzgondola.com" },
+      { "name": "National Memorial Museum of the Abductees (6·25)", "url": "https://www.abduction.go.kr" }
+    ],
+    "disclaimer": "This website is an independent non-profit visitor information project. We are affiliated with no government agency or official organization.",
+    "dataSource": "All historical background and park data referenced on this site are cross-checked against public materials from the Korea Tourism Organization (VISITKOREA), the Gyeonggi Tourism Organization and Paju City, with no commercial recommendations.",
+    "dataSourceLabel": "Data Source"
+  },
+  "privacy": {
+    "title": "Privacy Policy",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      { "heading": "1. Information Collection", "content": "We generally do not actively collect users' personal identity information. Any information you provide via contact forms or email will be kept strictly confidential." },
+      { "heading": "2. Use of Information", "content": "Information we collect is used only to provide, maintain and improve our services and to communicate with you. We will not sell or share your personal information with third parties for marketing purposes." },
+      { "heading": "3. Cookies & Tracking", "content": "We use cookies and similar tracking technologies to record activity on the site and store certain information. You can instruct your browser to refuse all cookies or to alert you when a cookie is sent." },
+      { "heading": "4. Data Security", "content": "Your data security matters to us. We take commercially reasonable measures to protect your personal data, though no internet transmission is 100% secure." }
+    ]
+  },
+  "terms": {
+    "title": "Terms of Service",
+    "lastUpdated": "Last updated: June 2026",
+    "sections": [
+      { "heading": "1. Acceptance of Terms", "content": "By accessing and using this website, you agree to be bound by these terms. If you disagree with any part, do not use the service." },
+      { "heading": "2. Use of Service", "content": "This website is an independent non-profit visitor information project. The information provided is for general informational purposes only. You agree to use the site responsibly and lawfully." },
+      { "heading": "3. Intellectual Property", "content": "All content on this site, including text, images and logos, unless otherwise stated, is the property of the site owner. Unauthorized use, reproduction or distribution is strictly prohibited." },
+      { "heading": "4. Limitation of Liability", "content": "We are not liable for any direct, indirect, incidental or consequential damages arising from the use or inability to use this site or the information contained in it." }
+    ]
+  },
+  "cookieSettings": {
+    "title": "Cookie Settings",
+    "description": "Manage your cookie preferences.",
+    "essential": { "title": "Strictly Necessary Cookies", "description": "Required for basic site function.", "badge": "Always active" },
+    "analytics": { "title": "Analytics Cookies", "description": "Help us understand how visitors interact with the site." },
+    "marketing": { "title": "Marketing Cookies", "description": "Used to track visitors across sites." },
+    "save": "Save preferences",
+    "saved": "Preferences saved!"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Practical information about Imjingak Pyeonghwa Nuri Park's facilities, history and visit planning.",
+    "amenities": {
+      "title": "Nearby Facilities",
+      "items": [
+        { "icon": "🅿️", "label": "Parking", "value": "Imjingak public lot / Peace Gondola lot" },
+        { "icon": "🚻", "label": "Restrooms", "value": "Park entrance & public restrooms" },
+        { "icon": "🔌", "label": "Fuel / EV charge", "value": "EV chargers at nearby public lots" },
+        { "icon": "♿", "label": "Accessibility", "value": "Flat lawn & paths accessible" }
+      ]
+    },
+    "categories": [
+      {
+        "id": "infra",
+        "title": "Transport & Infrastructure",
+        "items": [
+          { "q": "Is there parking, and what does it cost?", "a": "Several public lots surround the park, such as Imjingak public parking and Peace Gondola parking, within walking distance. Mostly free or low-cost; they fill fast on peak weekends — arrive early or prefer transit." },
+          { "q": "Are wheelchairs or strollers allowed?", "a": "The lawn and main paths are flat with accessible ramps; wheelchairs and strollers can reach Wind Hill and the Peace Bell fairly easily. Soft lawn still resists wheels, so use hard surfaces." },
+          { "q": "Are there restrooms or food on site?", "a": "Restrooms are at the park entrance and public areas; dining and convenience stores cluster in Munsan city — stock up on water and food at the entrance or in the city before entering." },
+          { "q": "Is there a gas station or EV charging nearby?", "a": "EV chargers are at the park-side public lots and Peace Gondola parking; conventional gas stations line Munsan and Paju city, handy for drivers to refuel on the way in." }
+        ]
+      },
+      {
+        "id": "geo",
+        "title": "History & Facts",
+        "items": [
+          { "q": "What does 'Imjingak' have to do with geography?", "a": "'Imjin' comes from the Imjin River, and 'gak' means a riverside pavilion-style memorial. The park sits just south of the DMZ — one of the closest points where ordinary Koreans can gaze toward the North. The name hides both the river's geography and a character that faces north and keeps silent watch." },
+          { "q": "What is its special natural and human value?", "a": "Imjingak is not a themed park, but a public field where citizens turned a stretch of Imjin River bank into a memorial landmark holding together peace wishes, separated-families memory, Freedom Bridge history and pinwheel art. Wind Hill, the Peace Bell and Freedom Bridge form a low-impact, high-empathy design and one of Paju's 'peace and memory' city cards." }
+        ]
+      },
+      {
+        "id": "plan",
+        "title": "Planning & Tickets",
+        "items": [
+          { "q": "Is there an admission fee?", "a": "Imjingak is an open public green space, free long-term, the public area is accessible 24 hours, no gate, no ticket or reservation — visit anytime (respect the memorial meaning, avoid late-night noise)." },
+          { "q": "How long does a visit take?", "a": "A relaxed visit is about 1–2 hours (including Wind Hill and photo stops); if you add the Peace Gondola, memorial hall or Third Tunnel, reserve a half day." },
+          { "q": "Can I still go in bad weather?", "a": "Yes — it is an open green space, accessible in any weather. But during typhoons, high wind or thunderstorms mind field wind protection and lightning; wear non-slip shoes and watch weather; avoid riverside steps and open high points in bad weather." }
+        ]
+      },
+      {
+        "id": "nearby",
+        "title": "Nearby Links",
+        "items": [
+          { "q": "What else is worth visiting nearby?", "a": "From Imjingak you can link the Paju Imjingak Peace Gondola (across the Imjin River into the DMZ), the Third Infiltration Tunnel (제3땅굴), Dora Observatory (도라전망대), Heyri Art Village (헤이리 예술마을) and Paju Book City, forming a 'pinwheels – history – art' half-day route." }
+        ]
+      }
+    ]
+  },
+  "recommendations": {
+    "title": "Explore More of Paju",
+    "attractionsTitle": "Nearby Attractions",
+    "toursTitle": "Recommended Experiences",
+    "attractions": [
+      { "name": "Paju Imjingak Peace Gondola (across Imjin River into DMZ)", "url": "http://www.dmzgondola.com" },
+      { "name": "Third Infiltration Tunnel (제3땅굴 · DMZ battlefield relic)", "url": "https://dmz.ggtour.or.kr" },
+      { "name": "Dora Observatory (도라전망대 · gaze north)", "url": "https://dmz.ggtour.or.kr" },
+      { "name": "Heyri Art Village (헤이리 예술마을)", "url": "https://tour.paju.go.kr" },
+      { "name": "Paju Book City (파주 출판도시)", "url": "https://tour.paju.go.kr" }
+    ],
+    "tours": [
+      { "name": "Gyeonggi DMZ Tourism Portal", "url": "https://dmz.ggtour.or.kr" },
+      { "name": "Korea Tourism Organization (VisitKorea)", "url": "https://chinese.visitkorea.or.kr" },
+      { "name": "Paju Culture & Tourism", "url": "https://tour.paju.go.kr" }
+    ]
+  },
+  "scienceArt": {
+    "title": "Peace & History: Wind, Bell and Border",
+    "subtitle": "Dig one layer below the surface 'good looks' to find what is truly rare here: it is at once a memorial, a piece of national memory, and an open-air peace classroom.",
+    "scienceMuseum": {
+      "name": "Imjin River & the Demarcation Line",
+      "role": "A public green space built south of the border",
+      "highlight": "The hardest part of Imjingak is both visible and invisible. Visible are the pinwheels and Peace Bell; invisible is the Military Demarcation Line it borders and the unfinished division history. Visitors see scenery; historians see a memory system still running.",
+      "points": [
+        "Core: separated-family memory, peace wishes and border geography light up this green space.",
+        "Key: public memorial transformed into low-impact, high-empathy space.",
+        "Meaning: it upgrades 'border wilderness' into a public peace model."
+      ],
+      "ctaLabel": "See VisitKorea ↗",
+      "ctaUrl": "https://chinese.visitkorea.or.kr"
+    },
+    "artMuseum": {
+      "name": "The peace symbol in the pinwheels",
+      "role": "Cultural symbol of Imjingak",
+      "highlight": "The colorful pinwheels, Peace Bell and Freedom Bridge, together with the Imjin River fields, form Imjingak's identity system: instantly readable as belonging to Paju, to peace, and to a gentle, restrained memorial aesthetics. From light pinwheels to heavy history, this contrast makes it one of Paju's most memorable cultural images.",
+      "points": [
+        "Imagery: pinwheels, Peace Bell, Freedom Bridge form strong recognition.",
+        "Status: Paju's most photogenic peace landmark.",
+        "Narrative: it translates the memorial theme into a publicly felt aesthetic experience."
+      ],
+      "ctaLabel": "See Paju tourism ↗",
+      "ctaUrl": "https://tour.paju.go.kr"
+    }
+  },
+  "outdoorMuseum": {
+    "title": "Photo & Spotting Guide: Imjingak's Photo Spots",
+    "subtitle": "As Paju's most recognizable peace landmark, a few structured spots and times greatly improve your photos' usefulness and beauty.",
+    "items": [
+      {
+        "id": "sunrise",
+        "icon": "🌅",
+        "name": "Wind Hill · pinwheel sea",
+        "location": "Wind Hill high point",
+        "background": "From dawn to dusk, thousands of colorful pinwheels turn by the Imjin River — Imjingak's classic 'pinwheel – field' composition, with pinwheel silhouettes especially moving in backlight.",
+        "points": [
+          "Use the pinwheel field as a lead-in to the horizon.",
+          "Crouch low to layer pinwheels and field for a steadier frame."
+        ],
+        "badge": { "value": "Dawn", "label": "Best shot" }
+      },
+      {
+        "id": "bridge",
+        "icon": "🌉",
+        "name": "Freedom Bridge · history overview",
+        "location": "Freedom Bridge path",
+        "background": "Shoot the memorial bridge from below or from the plaza to frame 'bridge + field + Imjin River' together — Imjingak's most recognizable spot.",
+        "points": [
+          "Side-light at dawn makes the bridge structure softest.",
+          "Mind your feet and rails; don't enter closed zones for a frame."
+        ],
+        "badge": { "value": "All day", "label": "Most accessible" }
+      },
+      {
+        "id": "sea",
+        "icon": "🔔",
+        "name": "Peace Bell & dusk",
+        "location": "Peace Bell plaza",
+        "background": "Blue hour (20–30 min after sunset) balances sky and lawn best — the strongest mood window, the bell solemn against the cool sky.",
+        "points": [
+          "Shoot at blue hour for the most balanced sky and lawn.",
+          "Silhouette the Peace Bell leaving a large warm field."
+        ],
+        "badge": { "value": "Dusk", "label": "Strongest mood" }
+      },
+      {
+        "id": "night",
+        "icon": "🌃",
+        "name": "Imjin River night lights",
+        "location": "Riverside rail / park",
+        "background": "At night the park lights up and the Imjin River mirrors the river of lights — good for a closing long-exposure night shot.",
+        "points": [
+          "Use the riverbank as a lead-in to the distance.",
+          "Small aperture + tripod for longer exposure."
+        ],
+        "badge": { "value": "Night", "label": "Best layers" }
+      }
+    ]
+  },
+  "education": {
+    "title": "Why is this Paju's peace landmark?",
+    "subtitle": "What's most worth learning about Imjingak is not 'it got pretty', but how a stretch of Imjin River field was brought back into public memory while keeping reverence for history.",
+    "points": [
+      {
+        "title": "A memorial field still used by citizens",
+        "text": "Imjingak is not a 'hide the border and done' case, but a sample that continuously activates the memorial through public-space design and turns it into a shared place.",
+        "items": [
+          "Citizens entrust daily strolls and peace wishes to this field.",
+          "Public green and city life coexist long-term."
+        ]
+      },
+      {
+        "title": "Writing memorial ethics into visitor behavior",
+        "text": "The signs, Peace Bell and guide system are not just guides, but let every visitor, while using the space, take part in respect for history and others.",
+        "items": [
+          "Visitors are guided to stay on low-impact paths.",
+          "Memorial experience and ecology are not sacrificed to each other."
+        ]
+      },
+      {
+        "title": "Turning border memory into public aesthetics",
+        "text": "Imjingak did not erase the division's past, but through pinwheels, the Peace Bell and signs lets the public, while visiting, realize what this land has gone through.",
+        "items": [
+          "Story depth and memorial experience complete at the same place.",
+          "This is exactly the value a non-profit science site should amplify."
+        ]
+      }
+    ]
+  },
+  "audience": {
+    "title": "Who Should Come? From Segment Guide to Custom Itinerary",
+    "subtitle": "Not just 'you'll like it', but directly telling you how to go, where to start, and which Paju nodes to link.",
+    "resonanceLabel": "Resonance: ",
+    "routeLabel": "Recommended: ",
+    "tipLabel": "Tip: ",
+    "items": [
+      {
+        "icon": "👨‍👩‍👧",
+        "group": "Families",
+        "resonance": "Free, open, safe flat lawn; kids can chase pinwheels and view the field, and easily walk to Freedom Bridge from the gentle side.",
+        "tip": "Save energy for the high-point stay rather than spending it on steep slopes."
+      },
+      {
+        "icon": "📷",
+        "group": "Photographers & couples",
+        "resonance": "Dawn and dusk colorful pinwheels are Paju's most romantic frames, very photogenic.",
+        "tip": "Count arrival, return and light into your plan so the frame doesn't lose to on-site pace."
+      },
+      {
+        "icon": "🌿",
+        "group": "History & peace lovers",
+        "resonance": "As a border memorial sample, separated-family memory, Freedom Bridge and the Peace Bell are worth a close look.",
+        "tip": "Avoid the most crowded weekends; choose dawn or weekday afternoons to truly observe historical details."
+      },
+      {
+        "icon": "🗺️",
+        "group": "First-time visitors to Korea",
+        "resonance": "Without going far to the countryside, you can observe the DMZ, peace memory and public green near Paju, and link trains, buses and local food — an ideal starting point to understand division and peace.",
+        "tip": "If you can only pick one Paju landmark, Imjingak is the best first stop for the 'peace and memory' theme."
+      }
+    ]
+  },
+  "lodging": {
+    "title": "Lodging Guide: Stay close, or stay convenient",
+    "subtitle": "Paju is a Gyeonggi town where 'green space and city connect'. We don't recommend specific hotels, but help you analyze two lodging patterns to choose what suits you.",
+    "scenarioTitle": "Two choices, how to choose",
+    "options": [
+      {
+        "icon": "🕊️",
+        "name": "Imjingak / Munsan area",
+        "role": "Best for park & gondola",
+        "highlight": "Staying at Imjingak or Munsan, you walk or take a short ride to Wind Hill, the Peace Bell and the Peace Gondola; the night field and river breeze suit travelers. Best for those focused on 'pinwheel stroll + memorial' with high convenience needs.",
+        "commute": "Commute: about 10–20 min walk to the park, about 5–10 min to the Peace Gondola. Low demand on legs, good for early-morning park walks.",
+        "points": [
+          "About 10–20 min walk to Wind Hill, least effort.",
+          "Very rich park night views and dining.",
+          "More choices, usually better value."
+        ]
+      },
+      {
+        "icon": "🏙️",
+        "name": "Paju city / Heyri Art Village",
+        "role": "Best for food & art",
+        "highlight": "Staying in Paju city or Heyri Art Village, next to the bus station, art districts and food streets, best for those focused on 'exhibitions + transfer', then take bus / taxi to Imjingak by day.",
+        "commute": "Commute: about 20–30 min by city bus or taxi to Imjingak. Good for drivers or independent travelers wanting absolute convenience.",
+        "points": [
+          "Bus station and art village at hand, good for transfers.",
+          "Art exhibitions, cafes and night markets are very rich.",
+          "About 20–40 min walk or a short ride to Imjingak."
+        ]
+      }
+    ],
+    "peakTitle": "Peak-season warning",
+    "peak": "Paju's spring cherry-blossom and holiday periods, plus DMZ tourist peak, tighten rooms and raise prices noticeably. Book several weeks ahead; if booking near a holiday, widen the range to Seoul, Goyang and other surrounding areas, then take the train.",
+    "tipsTitle": "Lodging tips",
+    "tips": [
+      "Want pinwheel shots: prefer Imjingak / Munsan, walk to the park at dawn.",
+      "Value food & art: choose Paju city / Heyri Art Village, walking and dining at hand.",
+      "Before booking, confirm breakfast, parking and EV chargers (drivers especially).",
+      "Book ahead in peak season and holidays to avoid no rooms or high prices."
+    ]
+  }
+}
