@@ -18,27 +18,33 @@ const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
 const canonical = alts[lang] ?? alts.zh;
 const { messages } = getI18n(Astro.url);
+const schema = messages.schema ?? {};
 
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'TouristAttraction',
-  name: messages.meta.title,
-  description: messages.meta.description,
+  name: schema.name ?? 'Imjingak Pyeonghwa Nuri Park',
+  alternateName: schema.alternateName ?? ['임진각 평화누리공원'],
+  description: schema.description ?? messages.meta.description,
   url: canonical,
-  image: 'https://imjingakpeacepark.com/gallery/imjingak-pyeonghwa-nuri-park-1.jpg',
-  telephone: '+82-31-956-8300',
+  mainEntityOfPage: canonical,
+  image: schema.image ?? [
+    'https://imjingakpeacepark.com/gallery/imjingak-pyeonghwa-nuri-park-1.jpg',
+    'https://imjingakpeacepark.com/gallery/imjingak-pyeonghwa-nuri-park-3.jpg',
+  ],
+  touristType: schema.touristType ?? ['History travelers', 'Families', 'Photographers'],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: '148-40, Imjingak-ro, Munsan-eup',
-    addressLocality: 'Paju-si',
-    addressRegion: 'Gyeonggi-do',
-    postalCode: '10808',
+    streetAddress: schema.streetAddress ?? '148-40 Imjingak-ro, Munsan-eup',
+    addressLocality: schema.addressLocality ?? 'Paju-si',
+    addressRegion: schema.addressRegion ?? 'Gyeonggi-do',
+    postalCode: schema.postalCode ?? '10808',
     addressCountry: 'KR',
   },
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: 37.8886,
-    longitude: 126.7449,
+    latitude: schema.latitude ?? 37.8902,
+    longitude: schema.longitude ?? 126.7702,
   },
   openingHoursSpecification: [
     {
@@ -48,7 +54,8 @@ const jsonLd = {
       closes: '23:59',
     },
   ],
-  isAccessibleForFree: true,
+  isAccessibleForFree: schema.isAccessibleForFree ?? true,
+  publicAccess: schema.publicAccess ?? true,
   offers: [
     {
       '@type': 'Offer',
@@ -63,7 +70,7 @@ const jsonLd = {
     ratingValue: '4.4',
     reviewCount: '7477',
   },
-  sameAs: ['https://maps.app.goo.gl/dUgMXau27SzsDpqQ9'],
+  sameAs: schema.sameAs ?? ['https://maps.app.goo.gl/dUgMXau27SzsDpqQ9'],
 };
   const breadcrumbLd = (() => {
     const bc = messages.breadcrumb;
@@ -100,9 +107,6 @@ const jsonLd = {
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
     <meta name="twitter:card" content="summary_large_image" />
-
-    <meta name="google-adsense-account" content="ca-pub-XXXXXXXXXX" />
-    <script is:inline async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-XXXXXXXXXX" crossorigin="anonymous"></script>
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
     <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>

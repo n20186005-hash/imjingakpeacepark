@@ -3,6 +3,7 @@ import { getI18n } from '../i18n/ui';
 const { messages } = getI18n(Astro.url);
 const q = messages.quickFactsDashboard;
 const items = q.items ?? [];
+const distanceMetrics = q.distanceMetrics ?? [];
 ---
 
 <section id="quick-facts" class="section-padding" style="background: var(--bg-secondary);">
@@ -27,5 +28,24 @@ const items = q.items ?? [];
         </div>
       ))}
     </div>
+
+    {distanceMetrics.length > 0 && (
+      <div class="mt-8 rounded-3xl p-6 md:p-8 border" style="background: var(--bg-primary); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+        <div class="max-w-3xl mb-6">
+          {q.distanceTitle && <h3 class="font-display text-2xl font-semibold mb-2" style="color: var(--text-primary);">{q.distanceTitle}</h3>}
+          {q.distanceSubtitle && <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">{q.distanceSubtitle}</p>}
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-4">
+          {distanceMetrics.map((metric) => (
+            <article class="rounded-2xl p-5 border h-full" style="background: var(--card-bg); border-color: var(--border-color);">
+              <p class="text-xs uppercase tracking-[0.18em] mb-2" style="color: var(--text-muted);">{metric.label}</p>
+              <p class="text-3xl font-semibold leading-none mb-3" style="color: var(--text-primary);">{metric.value}</p>
+              {metric.note && <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{metric.note}</p>}
+            </article>
+          ))}
+        </div>
+      </div>
+    )}
   </div>
 </section>

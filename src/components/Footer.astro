@@ -2,13 +2,13 @@
 import { getI18n } from '../i18n/ui';
 const { lang, messages } = getI18n(Astro.url);
 const f = messages.footer;
-const links = f.officialLinksList;
+const links = f.officialLinksList ?? [];
 ---
 
 <footer class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-color);">
   <div class="max-w-6xl mx-auto px-4">
     <div class="mission-block mb-10">
-      <h3 class="mission-title">🎯 {f.mission.title}</h3>
+      <h3 class="mission-title">{f.mission.title}</h3>
       <p class="mission-text">{f.mission.text}</p>
     </div>
     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-10">
@@ -19,12 +19,17 @@ const links = f.officialLinksList;
 
       <div>
         <h4 class="font-semibold mb-3" style="color: var(--text-primary);">{f.officialResourcesTitle}</h4>
-        <ul class="space-y-2 text-sm">
+        {f.officialResourcesIntro && (
+          <p class="text-sm leading-relaxed mb-4" style="color: var(--text-secondary);">{f.officialResourcesIntro}</p>
+        )}
+        <ul class="space-y-3 text-sm">
           {links.map((link) => (
-            <li>
-              <a href={link.url} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 break-words" style="color: var(--accent);">
+            <li class="rounded-2xl p-4 border" style="border-color: var(--border-color); background: var(--card-bg);">
+              <a href={link.url} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 break-words font-medium" style="color: var(--accent);">
                 {link.name} ↗
               </a>
+              {link.institution && <p class="mt-2 leading-relaxed" style="color: var(--text-primary);">{link.institution}</p>}
+              {link.description && <p class="mt-1 leading-relaxed" style="color: var(--text-secondary);">{link.description}</p>}
             </li>
           ))}
           <li class="pt-2 border-t" style="border-color: var(--border-color);">

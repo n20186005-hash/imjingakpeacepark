@@ -4,11 +4,46 @@ const { messages } = getI18n(Astro.url);
 const t = messages.knowledge;
 const sections = t.sections;
 const dyk = t.didYouKnow;
+const storyBoxes = t.storyBoxes ?? [];
+const storyDeckTitle = t.storyDeckTitle;
+const storyDeckSubtitle = t.storyDeckSubtitle;
 const { embedded = false } = Astro.props;
 ---
 
 {embedded ? (
   <div>
+    {storyBoxes.length > 0 && (
+      <div class="mb-12">
+        {(storyDeckTitle || storyDeckSubtitle) && (
+          <div class="mb-8">
+            {storyDeckTitle && <h3 class="font-display text-2xl sm:text-3xl font-semibold mb-3" style="color: var(--text-primary);">{storyDeckTitle}</h3>}
+            {storyDeckSubtitle && <p class="text-base leading-relaxed max-w-3xl" style="color: var(--text-secondary);">{storyDeckSubtitle}</p>}
+          </div>
+        )}
+
+        <div class="grid lg:grid-cols-2 gap-6">
+          {storyBoxes.map((story) => (
+            <article class="rounded-3xl p-6 border h-full" style="background: var(--card-bg); border-color: var(--border-color); box-shadow: var(--card-shadow);">
+              {story.eyebrow && <p class="text-xs uppercase tracking-[0.18em] mb-3" style="color: var(--text-muted);">{story.eyebrow}</p>}
+              <h4 class="font-display text-xl sm:text-2xl font-semibold mb-3" style="color: var(--text-primary);">{story.title}</h4>
+              {story.intro && <p class="text-base leading-relaxed mb-4" style="color: var(--text-secondary);">{story.intro}</p>}
+              {story.items && (
+                <ul class="space-y-3 text-sm leading-relaxed" style="color: var(--text-secondary);">
+                  {story.items.map((item) => (
+                    <li class="flex gap-3">
+                      <span class="mt-1 text-[0.65rem]" style="color: var(--accent);">●</span>
+                      <span>{item}</span>
+                    </li>
+                  ))}
+                </ul>
+              )}
+              {story.closing && <p class="text-sm leading-relaxed mt-4 pt-4 border-t" style="color: var(--text-secondary); border-color: var(--border-color);">{story.closing}</p>}
+            </article>
+          ))}
+        </div>
+      </div>
+    )}
+
     <div class="space-y-12">
       {sections.map((section, index) => (
         <div class={`flex flex-col md:flex-row gap-6 items-start ${index % 2 !== 0 ? 'md:flex-row-reverse' : ''}`}>
