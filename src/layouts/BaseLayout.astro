@@ -16,7 +16,7 @@ const { title, description, path = '' } = Astro.props;
 const lang = getLangFromUrl(Astro.url);
 const htmlLang = htmlLangAttr(lang);
 const alts = buildAlternates(path);
-const canonical = alts[lang] ?? alts.zh;
+const canonical = alts[lang] ?? alts.ko;
 const { messages } = getI18n(Astro.url);
 const schema = messages.schema ?? {};
 
@@ -120,6 +120,15 @@ const jsonLd = {
           }
         } catch (e) {}
       })();
+    </script>
+
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HXM22WWPKP');
     </script>
 
     <slot name="head" />

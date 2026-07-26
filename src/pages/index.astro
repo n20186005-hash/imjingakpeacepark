@@ -1,16 +1,24 @@
 ---
-const target = '/zh';
+const target = '/ko';
 ---
 
 <!doctype html>
-<html lang="zh-CN">
+<html lang="ko">
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="refresh" content={`0; url=${target}`} />
-    <link rel="canonical" href="https://imjingakpeacepark.com/zh" />
-    <title>临津阁和平公园（Imjingak Pyeonghwa Nuri Park · 임진각 평화누리공원）· 韩国京畿道坡州市 DMZ 和平主题公园</title>
+    <link rel="canonical" href="https://imjingakpeacepark.com/ko" />
+    <title>임진각 평화누리공원（Imjingak Pyeonghwa Nuri Park · 临津阁和平公园）· 韩国京畿道坡州市 DMZ 和平主题公园</title>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-HXM22WWPKP"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-HXM22WWPKP');
+    </script>
   </head>
   <body>
-    <p>正在跳转到 <a href={target}>中文</a>…</p>
+    <p>한국어로 이동 중… <a href={target}>한국어</a></p>
   </body>
 </html>
