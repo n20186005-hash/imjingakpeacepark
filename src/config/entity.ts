@@ -98,7 +98,7 @@ export const entity = {
    * 由下方的 mapsEmbedSrc(lang) 按当前页面语言拼出完整链接。
    */
   mapsEmbedPb:
-    '!1m5!3m1!1s0x357cf22deb81b203:0xa1f289873f84d1a2!2z5Li05rSl6ZiB5ZKM5bmz5YWs5Zut!5e1',
+    '!1m5!3m3!1m2!1s0x357cf22deb81b203:0xa1f289873f84d1a2!2z5Li05rSl6ZiB5ZKM5bmz5YWs5Zut!5e1',
 
   /** {{GOVT_TOURISM_URL}} —— 权威政府/官方旅游门户 */
   govtTourismUrl: 'https://ggtour.or.kr/dmz/',
@@ -131,5 +131,5 @@ export type Entity = typeof entity;
  * @param hl 地图界面语言，取值与 <html lang> 一致：zh-CN / en / ja / ko
  */
 export function mapsEmbedSrc(hl: string): string {
-  return `https://www.google.com/maps/embed?pb=${entity.mapsEmbedPb}!3m2!1s${hl}!2sus!4v1789098227767!5m2!1s${hl}!2sus`;
+  return `https://www.google.com/maps/embed?pb=${entity.mapsEmbedPb}!3m2!1s${hl}!2sus!4v1789109924557!5m2!1s${hl}!2sus`;
 }
