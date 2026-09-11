@@ -1,0 +1,75 @@
+---
+import { getI18n } from '../i18n/ui';
+import { entity } from '../config/entity';
+const { messages } = getI18n(Astro.url);
+const e = messages.entity ?? {};
+const hierarchy: string[] = e.hierarchy ?? [
+  entity.fullName,
+  entity.city,
+  entity.state,
+  entity.country,
+];
+const govUrl = e.govLinkUrl ?? entity.govtTourismUrl;
+---
+
+<section id="entity" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <!-- H2：About {{ATTRACTION_FULL_NAME}} —— 首段等位声明 -->
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-5" style="color: var(--text-primary);">
+      {e.aboutTitle}
+    </h2>
+    <p class="text-lg leading-relaxed mb-6" style="color: var(--text-secondary);">
+      {e.aboutBody}
+    </p>
+
+    <!-- 地理面包屑与归属层级：全称 → 城市 → 省/州 → 国家 -->
+    <nav class="mb-10" aria-label={e.hierarchyLabel}>
+      <ol class="flex flex-wrap items-center gap-x-2 gap-y-2 text-sm sm:text-base">
+        {hierarchy.map((item, index) => (
+          <>
+            <li
+              class="rounded-full px-3 py-1.5 border font-medium"
+              style="border-color: var(--border-color); background: var(--card-bg); color: var(--text-primary);"
+            >
+              {item}
+            </li>
+            {index < hierarchy.length - 1 && (
+              <li aria-hidden="true" style="color: var(--text-muted);">→</li>
+            )}
+          </>
+        ))}
+      </ol>
+    </nav>
+
+    <!-- H2：Location & How to Visit -->
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mt-10 mb-4" style="color: var(--text-primary);">
+      {e.locationTitle}
+    </h2>
+    <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: var(--text-secondary);">
+      {e.locationBody}
+    </p>
+
+    <!-- H2：Landmarks & Attractions Around + 周边语义集群描述 -->
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-4" style="color: var(--text-primary);">
+      {e.landmarksTitle}
+    </h2>
+    <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: var(--text-secondary);">
+      {e.landmarksBody}
+    </p>
+
+    <!-- H2：History & Significance -->
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-4" style="color: var(--text-primary);">
+      {e.historyTitle}
+    </h2>
+    <p class="text-base sm:text-lg leading-relaxed mb-8" style="color: var(--text-secondary);">
+      {e.historyBody}
+    </p>
+
+    <!-- 权威出站链接（政府 / 官方旅游局门户） -->
+    <p class="text-sm sm:text-base leading-relaxed pt-6 border-t" style="color: var(--text-secondary); border-color: var(--border-color);">
+      <a href={govUrl} target="_blank" rel="noopener noreferrer" class="font-medium" style="color: var(--accent);">
+        {e.govLinkLabel} ↗
+      </a>
+    </p>
+  </div>
+</section>

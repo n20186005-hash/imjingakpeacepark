@@ -1,0 +1,85 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const f = messages.facilities ?? {};
+const items = f.items ?? [];
+const tips = f.tips ?? [];
+---
+
+<section id="facilities" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-5xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {f.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-4 max-w-3xl mx-auto" style="color: var(--text-secondary);">
+      {f.subtitle}
+    </p>
+    {f.neutralNote && (
+      <p
+        class="text-center text-sm mb-10 max-w-3xl mx-auto rounded-2xl px-4 py-3"
+        style="background: var(--bg-tertiary); color: var(--text-secondary);"
+      >
+        ⚖️ {f.neutralNote}
+      </p>
+    )}
+
+    <ul class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4">
+      {items.map((item) => (
+        <li
+          class="rounded-2xl border p-5 h-full"
+          style="border-color: var(--border-color); background: var(--card-bg);"
+        >
+          <div class="flex items-center gap-3 mb-3">
+            <span class="text-2xl leading-none" aria-hidden="true">{item.icon}</span>
+            <h3 class="font-display text-lg font-semibold" style="color: var(--text-primary);">{item.name}</h3>
+          </div>
+          {item.summary && (
+            <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{item.summary}</p>
+          )}
+          {item.points?.length > 0 && (
+            <ul class="mt-3 space-y-2 text-sm" style="color: var(--text-secondary);">
+              {item.points.map((point: string) => (
+                <li class="flex gap-2 leading-relaxed">
+                  <span aria-hidden="true" style="color: var(--accent);">·</span>
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    <div class="mt-8 grid sm:grid-cols-2 gap-4">
+      {f.paymentTitle && (
+        <div class="rounded-2xl border p-5" style="border-color: var(--border-color); background: var(--bg-secondary);">
+          <h3 class="font-display text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            💳 {f.paymentTitle}
+          </h3>
+          <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{f.paymentNote}</p>
+        </div>
+      )}
+      {tips.length > 0 && (
+        <div class="rounded-2xl border p-5" style="border-color: var(--border-color); background: var(--bg-secondary);">
+          <h3 class="font-display text-lg font-semibold mb-2" style="color: var(--text-primary);">
+            🧭 {f.tipsTitle}
+          </h3>
+          <ul class="space-y-2 text-sm" style="color: var(--text-secondary);">
+            {tips.map((tip: string) => (
+              <li class="flex gap-2 leading-relaxed">
+                <span aria-hidden="true" style="color: var(--accent);">·</span>
+                <span>{tip}</span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </div>
+
+    {f.disclaimer && (
+      <p class="mt-6 text-xs leading-relaxed text-center max-w-3xl mx-auto" style="color: var(--text-muted);">
+        {f.disclaimer}
+      </p>
+    )}
+  </div>
+</section>

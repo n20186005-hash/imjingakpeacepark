@@ -1,0 +1,392 @@
+---
+import { getI18n } from '../i18n/ui';
+import {
+  getWeather,
+  weatherIcon,
+  weatherLabel,
+  windDescriptor,
+  clientPayload,
+  beaufortFor,
+  weatherLocale,
+  type WeatherLang,
+} from '../lib/weather';
+import { renderAdvicePanel } from '../lib/weatherAdviceHtml';
+import { entity } from '../config/entity';
+
+const { lang, messages } = getI18n(Astro.url);
+const w = messages.weather ?? {};
+const wl = (lang as WeatherLang) ?? 'ko';
+const locale = weatherLocale(wl);
+
+// 服务端获取（带进程内缓存）；失败时返回 null，页面仍正常渲染并由客户端补齐
+const data = await getWeather();
+
+const fmtWeekday = (iso: string) => {
+  try {
+    return new Intl.DateTimeFormat(locale, { weekday: 'short' }).format(new Date(`${iso}T12:00:00`));
+  } catch {
+    return '';
+  }
+};
+const fmtClock = (iso: string) => (iso && iso.length >= 16 ? iso.slice(11, 16) : '—');
+const fmtHourLabel = (iso: string) => (iso && iso.length >= 16 ? iso.slice(11, 16) : '—');
+
+const uvLevel = (uv: number | undefined) => {
+  const levels = w.uvLevels ?? ['낮음', '보통', '높음', '매우 높음', '위험'];
+  const v = uv ?? 0;
+  const i = v < 3 ? 0 : v < 6 ? 1 : v < 8 ? 2 : v < 11 ? 3 : 4;
+  return levels[i];
+};
+
+const dayLabel = (index: number, iso: string) => {
+  if (index === 0) return w.today ?? fmtWeekday(iso);
+  if (index === 1) return w.tomorrow ?? fmtWeekday(iso);
+  return w.dayNames?.[index] ?? fmtWeekday(iso);
+};
+
+const now = data?.current;
+const today = data?.daily?.[0];
+const forceLabel = (w.windForceLabel ?? '').replace('{n}', String(beaufortFor(now?.windSpeed ?? 0)));
+
+// 出行建议面板：与客户端刷新共用同一套判定逻辑与模板
+const adviceDict = (w.advice ?? {}) as Record<string, string>;
+const adviceUi = {
+  alertTitle: w.adviceAlertTitle ?? '',
+  noAlert: w.adviceNoAlert ?? '',
+  note: w.adviceNote ?? '',
+  footer: adviceDict.alFooter ?? '',
+  outfit: w.adviceOutfit ?? '',
+  plan: w.advicePlan ?? '',
+  items: w.adviceItems ?? '',
+};
+const panel = data
+  ? renderAdvicePanel({
+      dict: adviceDict,
+      ui: adviceUi,
+      current: data.current,
+      today: data.daily?.[0] ?? null,
+      tomorrow: data.daily?.[1] ?? null,
+      venue: entity.venue,
+    })
+  : null;
+
+const config = clientPayload(wl);
+const wxConfig = {
+  ...config,
+  endpoint: 'https://api.open-meteo.com/v1/forecast',
+  latitude: entity.latitude,
+  longitude: entity.longitude,
+  venue: entity.venue,
+  adviceDict,
+  adviceUi,
+  windForceLabel: w.windForceLabel ?? '',
+  uvLevels: w.uvLevels ?? [],
+  today: w.today ?? '',
+  tomorrow: w.tomorrow ?? '',
+};
+---
+
+<section id="weather" class="section-padding" style="background: var(--bg-secondary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {w.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-8" style="color: var(--text-secondary);">{w.subtitle}</p>
+
+    <!-- 当前天气 -->
+    <div class="rounded-3xl border p-6 sm:p-8 mb-6" style="border-color: var(--border-color); background: var(--card-bg);">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-6">
+        <div class="flex items-center gap-5 shrink-0">
+          <span id="wx-now-icon" class="text-5xl sm:text-6xl leading-none" aria-hidden="true">
+            {data ? weatherIcon(now?.weatherCode ?? 0, now?.isDay ?? true) : '⛅'}
+          </span>
+          <div>
+            <div class="flex items-start">
+              <span id="wx-now-temp" class="font-display text-5xl sm:text-6xl font-semibold leading-none" style="color: var(--text-primary);">
+                {data ? Math.round(now?.temperature ?? 0) : '—'}
+              </span>
+              <span class="text-2xl font-semibold mt-1" style="color: var(--text-muted);">°C</span>
+            </div>
+            <p id="wx-now-desc" class="mt-2 text-base font-medium" style="color: var(--text-primary);">
+              {data ? weatherLabel(now?.weatherCode ?? 0, wl) : ''}
+            </p>
+            <p class="text-sm mt-0.5" style="color: var(--text-muted);">
+              {w.feelsLike}: <span id="wx-now-feels">{data ? Math.round(now?.apparentTemperature ?? 0) : '—'}°C</span>
+            </p>
+          </div>
+        </div>
+
+        <dl class="grid grid-cols-2 sm:grid-cols-3 gap-3 text-sm flex-1">
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-tertiary);">
+            <dt style="color: var(--text-muted);">{w.humidity}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);"><span id="wx-now-humidity">{data ? now?.humidity : '—'}</span>%</dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-tertiary);">
+            <dt style="color: var(--text-muted);">{w.wind}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);">
+              <span id="wx-now-wind">{data ? Math.round(now?.windSpeed ?? 0) : '—'}</span> km/h
+              <span id="wx-now-force" class="block text-xs font-normal" style="color: var(--text-muted);">
+                {data ? `${windDescriptor(now?.windSpeed ?? 0, wl)} · ${forceLabel}` : ''}
+              </span>
+            </dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-tertiary);">
+            <dt style="color: var(--text-muted);">{w.precipitation}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);"><span id="wx-now-precip">{data ? today?.precipitationProbability ?? 0 : '—'}</span>%</dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-tertiary);">
+            <dt style="color: var(--text-muted);">{w.uvIndex}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);">
+              <span id="wx-now-uv">{data ? Math.round(today?.uvIndexMax ?? 0) : '—'}</span>
+              <span id="wx-now-uv-level" class="block text-xs font-normal" style="color: var(--text-muted);">{data ? uvLevel(today?.uvIndexMax) : ''}</span>
+            </dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-tertiary);">
+            <dt style="color: var(--text-muted);">{w.sunrise}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);"><span id="wx-now-sunrise">{data ? fmtClock(today?.sunrise ?? '') : '—'}</span></dd>
+          </div>
+          <div class="rounded-xl px-3 py-2" style="background: var(--bg-tertiary);">
+            <dt style="color: var(--text-muted);">{w.sunset}</dt>
+            <dd class="font-semibold" style="color: var(--text-primary);"><span id="wx-now-sunset">{data ? fmtClock(today?.sunset ?? '') : '—'}</span></dd>
+          </div>
+        </dl>
+      </div>
+
+      <!-- 出行建议：风险置顶，其余按「穿搭 / 游玩 / 随身」三块动态渲染 -->
+      <div class="mt-6" id="wx-advice" data-tone={panel?.tone ?? 'good'} set:html={panel?.html ?? ''}></div>
+    </div>
+
+    <!-- 逐小时 -->
+    <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);">{w.hourlyTitle}</h3>
+    <ul
+      id="wx-hourly"
+      class="flex gap-2 overflow-x-auto pb-3 mb-8 -mx-1 px-1"
+      style="scrollbar-width: thin;"
+    >
+      {(data?.hourly ?? []).map((h) => (
+        <li
+          class="shrink-0 w-[68px] rounded-2xl border px-2 py-3 text-center"
+          style="border-color: var(--border-color); background: var(--card-bg);"
+        >
+          <span class="block text-xs" style="color: var(--text-muted);">{fmtHourLabel(h.time)}</span>
+          <span class="block text-2xl leading-tight my-1" aria-hidden="true">{weatherIcon(h.weatherCode, true)}</span>
+          <span class="block text-sm font-semibold" style="color: var(--text-primary);">{Math.round(h.temperature)}°</span>
+          <span class="block text-xs" style="color: var(--text-muted);">{h.precipitationProbability}%</span>
+        </li>
+      ))}
+    </ul>
+
+    <!-- 未来多日预报 -->
+    <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);">{w.forecastTitle}</h3>
+    <ul id="wx-daily" class="rounded-3xl border overflow-hidden" style="border-color: var(--border-color);">
+      {(data?.daily ?? []).map((d, i) => (
+        <li
+          class="flex items-center gap-4 px-4 py-3"
+          style={`background: ${i % 2 === 0 ? 'var(--card-bg)' : 'var(--bg-tertiary)'};${i > 0 ? 'border-top: 1px solid var(--border-color);' : ''}`}
+        >
+          <span class="w-16 shrink-0 text-sm font-medium" style="color: var(--text-primary);">{dayLabel(i, d.date)}</span>
+          <span class="text-2xl shrink-0" aria-hidden="true">{weatherIcon(d.weatherCode, true)}</span>
+          <span class="flex-1 text-sm truncate" style="color: var(--text-secondary);">{weatherLabel(d.weatherCode, wl)}</span>
+          <span class="shrink-0 text-xs w-12 text-right" style="color: var(--text-muted);">{d.precipitationProbability}%</span>
+          <span class="shrink-0 text-sm font-semibold w-20 text-right" style="color: var(--text-primary);">
+            {Math.round(d.tempMax)}° <span style="color: var(--text-muted);">/ {Math.round(d.tempMin)}°</span>
+          </span>
+        </li>
+      ))}
+    </ul>
+
+    <p class="mt-4 text-xs leading-relaxed" style="color: var(--text-muted);">
+      {w.updatedLabel}: <span id="wx-updated">{data ? fmtClock(new Date(data.fetchedAt).toISOString()) : '—'}</span> · {data?.timezoneAbbr ?? 'KST'} · {w.dataNote}
+    </p>
+  </div>
+</section>
+
+<script type="application/json" id="wx-config" is:inline set:html={JSON.stringify(wxConfig)}></script>
+
+<script>
+  import { beaufortFor, windDescriptor } from '../lib/weather';
+  import { renderAdvicePanel } from '../lib/weatherAdviceHtml';
+
+  (() => {
+    const cfgEl = document.getElementById('wx-config');
+    if (!cfgEl) return;
+    let cfg: any;
+    try {
+      cfg = JSON.parse(cfgEl.textContent || '{}');
+    } catch {
+      return;
+    }
+
+    const $ = (id: string) => document.getElementById(id);
+    const set = (id: string, value: string) => {
+      const el = $(id);
+      if (el) el.textContent = value;
+    };
+    const groupOf = (code: number) => cfg.groups?.[code] ?? 'partlyCloudy';
+    const iconOf = (code: number, isDay = true) => {
+      const g = groupOf(code);
+      if (!isDay && cfg.nightIcons?.[g]) return cfg.nightIcons[g];
+      return cfg.icons?.[g] ?? '⛅';
+    };
+    const labelOf = (code: number) => cfg.labels?.[groupOf(code)] ?? '';
+    const uvLevel = (uv: number) => {
+      const levels = cfg.uvLevels?.length ? cfg.uvLevels : ['', '', '', '', ''];
+      const i = uv < 3 ? 0 : uv < 6 ? 1 : uv < 8 ? 2 : uv < 11 ? 3 : 4;
+      return levels[i] ?? '';
+    };
+    const weekday = (iso: string) => {
+      try {
+        return new Intl.DateTimeFormat(cfg.locale, { weekday: 'short' }).format(new Date(iso + 'T12:00:00'));
+      } catch {
+        return '';
+      }
+    };
+    const dayLabel = (i: number, iso: string) =>
+      i === 0 ? cfg.today || weekday(iso) : i === 1 ? cfg.tomorrow || weekday(iso) : weekday(iso);
+    const clock = (iso: string) => (iso && iso.length >= 16 ? iso.slice(11, 16) : '—');
+
+    /** 把接口返回的原始字段整理成建议引擎需要的结构 */
+    const dailyAt = (daily: any, i: number) => {
+      if (!daily?.time?.[i]) return null;
+      return {
+        weatherCode: daily.weather_code?.[i] ?? 0,
+        tempMax: daily.temperature_2m_max?.[i] ?? 0,
+        tempMin: daily.temperature_2m_min?.[i] ?? 0,
+        precipitationProbability: daily.precipitation_probability_max?.[i] ?? 0,
+        precipitationSum: daily.precipitation_sum?.[i] ?? 0,
+        uvIndexMax: daily.uv_index_max?.[i] ?? 0,
+        windSpeedMax: daily.wind_speed_10m_max?.[i] ?? 0,
+        windGustsMax: daily.wind_gusts_10m_max?.[i] ?? 0,
+        visibilityMin: daily.visibility_min?.[i] ?? 0,
+        snowDepthMax: daily.snow_depth_max?.[i] ?? 0,
+        sunrise: daily.sunrise?.[i] ?? '',
+        sunset: daily.sunset?.[i] ?? '',
+      };
+    };
+
+    async function refresh() {
+      try {
+        const params = new URLSearchParams({
+          latitude: String(cfg.latitude),
+          longitude: String(cfg.longitude),
+          current:
+            'temperature_2m,relative_humidity_2m,apparent_temperature,is_day,precipitation,weather_code,wind_speed_10m,wind_gusts_10m,wind_direction_10m,visibility,dew_point_2m,uv_index',
+          hourly: 'temperature_2m,weather_code,precipitation_probability',
+          daily:
+            'weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,precipitation_sum,precipitation_probability_max,uv_index_max,wind_speed_10m_max,wind_gusts_10m_max,visibility_min,snow_depth_max',
+          timezone: 'auto',
+          forecast_days: '7',
+          wind_speed_unit: 'kmh',
+        });
+        const res = await fetch(`${cfg.endpoint}?${params.toString()}`, { headers: { accept: 'application/json' } });
+        if (!res.ok) return;
+        const payload = await res.json();
+        const cur = payload?.current ?? {};
+        const daily = payload?.daily ?? {};
+        const hourly = payload?.hourly ?? {};
+
+        const isDay = cur.is_day === 1 || cur.is_day === true;
+        const code = cur.weather_code ?? 0;
+        const wind = cur.wind_speed_10m ?? 0;
+
+        set('wx-now-icon', iconOf(code, isDay));
+        set('wx-now-temp', String(Math.round(cur.temperature_2m ?? 0)));
+        set('wx-now-desc', labelOf(code));
+        set('wx-now-feels', `${Math.round(cur.apparent_temperature ?? 0)}°C`);
+        set('wx-now-humidity', String(Math.round(cur.relative_humidity_2m ?? 0)));
+        set('wx-now-wind', String(Math.round(wind)));
+        set(
+          'wx-now-force',
+          `${windDescriptor(wind, cfg.lang ?? 'ko')} · ${String(cfg.windForceLabel ?? '').replace('{n}', String(beaufortFor(wind)))}`
+        );
+        set('wx-now-precip', String(Math.round(daily.precipitation_probability_max?.[0] ?? 0)));
+        set('wx-now-sunrise', clock(daily.sunrise?.[0] ?? ''));
+        set('wx-now-sunset', clock(daily.sunset?.[0] ?? ''));
+        const uv0 = Math.round(daily.uv_index_max?.[0] ?? 0);
+        set('wx-now-uv', String(uv0));
+        set('wx-now-uv-level', uvLevel(uv0));
+
+        // 出行建议：与首屏使用同一引擎与模板，刷新后同步重算
+        const adviceEl = $('wx-advice');
+        if (adviceEl) {
+          const panel = renderAdvicePanel({
+            dict: cfg.adviceDict ?? {},
+            ui: cfg.adviceUi ?? {},
+            current: {
+              weatherCode: code,
+              temperature: cur.temperature_2m ?? 0,
+              apparentTemperature: cur.apparent_temperature ?? 0,
+              humidity: cur.relative_humidity_2m ?? 0,
+              windSpeed: wind,
+              windGusts: cur.wind_gusts_10m ?? wind,
+              visibility: cur.visibility ?? 0,
+              uvIndex: cur.uv_index ?? 0,
+            },
+            today: dailyAt(daily, 0),
+            tomorrow: dailyAt(daily, 1),
+            venue: cfg.venue,
+          });
+          adviceEl.innerHTML = panel.html;
+          adviceEl.setAttribute('data-tone', panel.tone);
+        }
+
+        // 逐小时
+        const times: string[] = hourly.time ?? [];
+        const curTime: string = cur.time ?? '';
+        let start = times.findIndex((t) => t === curTime);
+        if (start < 0) start = times.findIndex((t) => t >= curTime);
+        if (start < 0) start = 0;
+        const hourlyEl = $('wx-hourly');
+        if (hourlyEl && times.length) {
+          const parts: string[] = [];
+          for (let i = start; i < times.length && parts.length < 12; i += 1) {
+            const c = hourly.weather_code?.[i] ?? 0;
+            parts.push(
+              `<li class="shrink-0 w-[68px] rounded-2xl border px-2 py-3 text-center" style="border-color: var(--border-color); background: var(--card-bg);">` +
+                `<span class="block text-xs" style="color: var(--text-muted);">${clock(times[i])}</span>` +
+                `<span class="block text-2xl leading-tight my-1" aria-hidden="true">${iconOf(c, true)}</span>` +
+                `<span class="block text-sm font-semibold" style="color: var(--text-primary);">${Math.round(hourly.temperature_2m?.[i] ?? 0)}°</span>` +
+                `<span class="block text-xs" style="color: var(--text-muted);">${hourly.precipitation_probability?.[i] ?? 0}%</span>` +
+                `</li>`
+            );
+          }
+          hourlyEl.innerHTML = parts.join('');
+        }
+
+        // 多日预报
+        const dates: string[] = daily.time ?? [];
+        const dailyEl = $('wx-daily');
+        if (dailyEl && dates.length) {
+          const rows = dates.slice(0, 7).map((date, i) => {
+            const c = daily.weather_code?.[i] ?? 0;
+            const bg = i % 2 === 0 ? 'var(--card-bg)' : 'var(--bg-tertiary)';
+            const border = i > 0 ? 'border-top: 1px solid var(--border-color);' : '';
+            return (
+              `<li class="flex items-center gap-4 px-4 py-3" style="background: ${bg};${border}">` +
+              `<span class="w-16 shrink-0 text-sm font-medium" style="color: var(--text-primary);">${dayLabel(i, date)}</span>` +
+              `<span class="text-2xl shrink-0" aria-hidden="true">${iconOf(c, true)}</span>` +
+              `<span class="flex-1 text-sm truncate" style="color: var(--text-secondary);">${labelOf(c)}</span>` +
+              `<span class="shrink-0 text-xs w-12 text-right" style="color: var(--text-muted);">${daily.precipitation_probability_max?.[i] ?? 0}%</span>` +
+              `<span class="shrink-0 text-sm font-semibold w-20 text-right" style="color: var(--text-primary);">${Math.round(daily.temperature_2m_max?.[i] ?? 0)}° <span style="color: var(--text-muted);">/ ${Math.round(daily.temperature_2m_min?.[i] ?? 0)}°</span></span>` +
+              `</li>`
+            );
+          });
+          dailyEl.innerHTML = rows.join('');
+        }
+
+        const fetched = new Date();
+        set('wx-updated', clock(fetched.toISOString()));
+      } catch {
+        /* 静默失败：保留服务端渲染的内容 */
+      }
+    }
+
+    // 页面加载后刷新一次，并每 15 分钟自动更新
+    if ('requestIdleCallback' in window) {
+      (window as any).requestIdleCallback(() => refresh());
+    } else {
+      window.setTimeout(refresh, 1200);
+    }
+    window.setInterval(refresh, 15 * 60 * 1000);
+  })();
+</script>

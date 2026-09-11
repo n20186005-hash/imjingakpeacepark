@@ -1,0 +1,41 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const s = messages.sources ?? {};
+const items = s.items ?? [];
+---
+
+<section id="sources" class="section-padding" style="background: var(--bg-tertiary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {s.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-10" style="color: var(--text-secondary);">{s.subtitle}</p>
+
+    <ul class="grid sm:grid-cols-2 gap-4">
+      {items.map((item) => (
+        <li class="rounded-2xl p-5 border h-full" style="border-color: var(--border-color); background: var(--card-bg);">
+          <a
+            href={item.url}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="font-medium hover:opacity-70 break-words"
+            style="color: var(--accent);"
+          >
+            {item.name} ↗
+          </a>
+          {item.publisher && (
+            <p class="text-xs uppercase tracking-wide mt-1.5" style="color: var(--text-muted);">{item.publisher}</p>
+          )}
+          {item.note && (
+            <p class="text-sm leading-relaxed mt-2" style="color: var(--text-secondary);">{item.note}</p>
+          )}
+        </li>
+      ))}
+    </ul>
+
+    {s.updatedValue && (
+      <p class="text-xs mt-6 text-center" style="color: var(--text-muted);">{s.updatedLabel}：{s.updatedValue}</p>
+    )}
+  </div>
+</section>

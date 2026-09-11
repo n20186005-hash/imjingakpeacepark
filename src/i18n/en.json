@@ -1,11 +1,47 @@
 {
   "meta": {
-    "title": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) | Paju, Gyeonggi-do · Korea's Iconic Peace Park by the DMZ",
-    "description": "The complete guide to Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원): a peace park in Paju, Gyeonggi-do, near the Military Demarcation Line. Beyond Wind Hill, the Peace Bell and Freedom Bridge, the site preserves the lived memory of separated families, POW return, and the unresolved history of the DMZ."
+    "title": "Imjingak Peace Park (Pyeonghwa Nuri): Tickets, Hours, Gondola",
+    "description": "Plan your visit to Imjingak Peace Park (Pyeonghwa Nuri) in Paju — free entry, opening hours, the DMZ Peace Gondola, Freedom Bridge and Seoul directions."
+  },
+  "entity": {
+    "aboutTitle": "About Imjingak Pyeonghwa Nuri Park",
+    "aboutBody": "Welcome to Imjingak Pyeonghwa Nuri Park, widely recognized as the central Imjingak Peace Park. Located in the heart of Paju-si, Gyeonggi-do, South Korea, this destination serves as a primary hub for travelers visiting the region.",
+    "locationTitle": "Location & How to Visit Imjingak Peace Park in Paju-si",
+    "locationBody": "The park sits at 37.8902, 126.7702, at 148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do 10808, South Korea. Arrive by car via Jayu-ro with public parking nearby, or take the Gyeongui–Jungang Line to Imjingang Station and walk about 10 minutes. The park is free and open year-round, with no ticket or reservation required.",
+    "landmarksTitle": "Landmarks & Attractions Around Imjingak Peace Park",
+    "landmarksBody": "When visiting Imjingak Pyeonghwa Nuri Park, visitors can easily explore surrounding historical landmarks and points of interest, including the Imjingak Peace Gondola and Dorasan Observatory.",
+    "historyTitle": "History & Significance of Imjingak Pyeonghwa Nuri Park",
+    "historyBody": "Imjingak was established in 1972 as a place of reunion and remembrance for families separated by the Korean War. Over the following decades it gained the Peace Bell, Freedom Bridge, the Mangbaedan altar, and the 2005 Wind Hill pinwheel installation, becoming a key site for understanding the division and peace memory of the Korean Peninsula.",
+    "hierarchyLabel": "Geographic hierarchy",
+    "hierarchy": ["Imjingak Pyeonghwa Nuri Park", "Paju-si", "Gyeonggi-do", "South Korea"],
+    "govLinkLabel": "South Korea / Gyeonggi-do Official Tourism Portal",
+    "govLinkUrl": "https://ggtour.or.kr/dmz/"
+  },
+  "sources": {
+    "title": "Sources & Further Reading",
+    "subtitle": "This guide cross-references public materials from the following official and semi-official institutions.",
+    "items": [
+      { "name": "Korea Tourism Organization (VISITKOREA)", "url": "https://english.visitkorea.or.kr", "publisher": "Korea Tourism Organization", "note": "Official source for Imjingak and DMZ-area tourism information." },
+      { "name": "Gyeonggi Tourism Organization — DMZ Portal", "url": "https://ggtour.or.kr/dmz/", "publisher": "Gyeonggi Tourism Organization", "note": "Public portal for northern Gyeonggi DMZ travel and Imjingak interpretation." },
+      { "name": "Paju City DMZ Tourism Reservation System", "url": "https://dmz.paju.go.kr", "publisher": "Paju City Government", "note": "Official booking and visitor guidance for Paju DMZ programs." },
+      { "name": "National Memorial Museum of the Abductees in the Korean War", "url": "https://www.abductions625.go.kr", "publisher": "Ministry of Unification (related)", "note": "Official exhibitions and educational material on wartime family rupture." },
+      { "name": "Accessible Tourism Information System", "url": "https://access.visitkorea.or.kr", "publisher": "Korea Tourism Organization", "note": "Public accessibility information for seniors, wheelchair users and families." },
+      { "name": "Open-Meteo — Weather Forecast Data", "url": "https://open-meteo.com/", "publisher": "Open-Meteo", "note": "Data source behind the live forecast values shown on this page." }
+    ],
+    "updatedLabel": "Last verified",
+    "updatedValue": "2026-06"
   },
   "schema": {
     "name": "Imjingak Pyeonghwa Nuri Park",
-    "alternateName": ["임진각 평화누리공원", "Imjingak Peace Nuri Park"],
+    "alternateName": [
+      "Imjingak Peace Park",
+      "Imjingak Pyeonghwa Nuri Park",
+      "Imjingak Park",
+      "Pyeonghwa Nuri Park",
+      "임진각 평화누리공원",
+      "临津阁和平公园",
+      "臨津閣平和ヌリ公園"
+    ],
     "description": "A peace-themed public park in Paju, Gyeonggi-do, close to the Military Demarcation Line, combining memorial space, public green landscape, and border-history interpretation.",
     "streetAddress": "148-40 Imjingak-ro, Munsan-eup",
     "addressLocality": "Paju-si",
@@ -55,6 +91,8 @@
   },
   "stickyNav": {
     "facts": "Key Facts",
+    "weather": "Weather",
+    "facilities": "Facilities",
     "etiquette": "Park Etiquette",
     "route": "Half-Day Route",
     "transport": "Getting There",
@@ -68,6 +106,9 @@
     "rating": "4.4 (7,477)",
     "reviewCount": "7,477 reviews",
     "hours": "Open 24 hours (public park area)",
+    "admission": "Free entry",
+    "plusCodeLabel": "Plus Code",
+    "alsoKnownAsLabel": "Also known as:",
     "openMaps": "View location on Google Maps",
     "mapsUrl": "https://maps.app.goo.gl/dUgMXau27SzsDpqQ9",
     "tags": ["Peace theme park", "Wind Hill pinwheels", "Free · public green space"],
@@ -84,8 +125,8 @@
       { "icon": "🆓", "label": "Admission", "value": "Free" },
       { "icon": "🕐", "label": "Open", "value": "24 hours" }
     ],
-    "navCta": { "label": "📍 Navigate", "href": "#transport" },
-    "photoCta": { "label": "📸 Photo spots", "href": "#gallery" },
+    "navCta": { "label": "📍 Getting here from Seoul", "href": "#transport" },
+    "photoCta": { "label": "📸 Wind Hill photo spots", "href": "#gallery" },
     "liveInfo": { "weather": "Current weather", "sunset": "Today's sunset" },
     "sunsetPlanner": {
       "eyebrow": "Golden Hour Calculator · Light Tool",
@@ -513,7 +554,8 @@
   "gallery": {
     "title": "Photo Gallery",
     "subtitle": "From the colorful pinwheels of Wind Hill, the Peace Bell silhouette and Freedom Bridge to the open Imjin River fields — the visual beauty of Imjingak Pyeonghwa Nuri Park.",
-    "photoAlt": "Imjingak Pyeonghwa Nuri Park",
+    "photoAltPrefix": "Imjingak Peace Park, Paju",
+    "photoAlt": "Imjingak Peace Park, Paju",
     "photoAlts": [
       "Panorama of Imjingak with thousands of colorful pinwheels turning over the Imjin River fields.",
       "Quiet empty park at dawn, river mist best for slow wide shots.",
@@ -640,6 +682,16 @@
       }
     ],
     "disclaimer": "This website is an independent non-profit visitor information project. We are affiliated with no government agency or official organization.",
+    "imageRights": "All images displayed on this website are the property of, and copyrighted by, their respective photographers.",
+    "napTitle": "Official Name & Address",
+    "napNameLabel": "Name",
+    "napAddressLabel": "Address",
+    "napPhoneLabel": "Phone",
+    "napName": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원)",
+    "napAddress": "148-40 Imjingak-ro, Munsan-eup, Paju-si, Gyeonggi-do 10808, South Korea",
+    "napPhone": "+82 31 956 8300",
+    "govTourismLabel": "Official Tourism Portal",
+    "govTourismUrl": "https://ggtour.or.kr/dmz/",
     "dataSource": "All historical background and park data referenced on this site are cross-checked against public materials from the Korea Tourism Organization (VISITKOREA), the Gyeonggi Tourism Organization and Paju City, with no commercial recommendations.",
     "dataSourceLabel": "Data Source"
   },
@@ -880,6 +932,356 @@
         "group": "First-time visitors to Korea",
         "resonance": "Without going far to the countryside, you can observe the DMZ, peace memory and public green near Paju, and link trains, buses and local food — an ideal starting point to understand division and peace.",
         "tip": "If you can only pick one Paju landmark, Imjingak is the best first stop for the 'peace and memory' theme."
+      }
+    ]
+  },
+  "weather": {
+    "title": "Live Weather & Forecast at Imjingak Pyeonghwa Nuri Park",
+    "subtitle": "Check the temperature, rain chance and wind before you set out, and decide on a jacket and umbrella in advance. Wind along the river at the border can make it feel colder than the numbers suggest.",
+    "feelsLike": "Feels like",
+    "humidity": "Humidity",
+    "wind": "Wind",
+    "precipitation": "Rain chance",
+    "uvIndex": "UV index",
+    "sunrise": "Sunrise",
+    "sunset": "Sunset",
+    "hourlyTitle": "Hourly forecast",
+    "forecastTitle": "7-day forecast",
+    "today": "Today",
+    "tomorrow": "Tomorrow",
+    "updatedLabel": "Updated",
+    "umbrellaYes": "Rain or snow is expected. Bring an umbrella and a waterproof layer.",
+    "umbrellaMaybe": "Showers are possible. A folding umbrella will keep you comfortable.",
+    "umbrellaNo": "Rain is unlikely. No umbrella needed, light clothing is fine.",
+    "uvLevels": ["Low", "Moderate", "High", "Very high", "Extreme"],
+    "dataNote": "Forecasts refresh periodically, and actual conditions along the border can differ from this guide.",
+    "windForceLabel": "Force {n}",
+    "adviceTitle": "What to Wear & Do",
+    "adviceSubtitle": "Generated from current and upcoming weather — only the tips that apply to your visit are shown.",
+    "adviceOutfit": "What to wear",
+    "advicePlan": "How to plan",
+    "adviceItems": "What to bring",
+    "adviceAlertTitle": "Safety notice",
+    "adviceNoAlert": "No weather-related safety notice at the moment — you can follow your plan.",
+    "adviceNote": "These tips are generated automatically from public weather data and are for reference only; on-site and official notices take priority.",
+    "advice": {
+      "hlAlert": "{name} risk is high — consider adjusting your plan and gear",
+      "hlThunder": "Thunderstorms expected — plan outdoor stops with care",
+      "hlHeavyRain": "Heavy rain — avoid long spells outdoors",
+      "hlRain": "Rain is likely — take an umbrella",
+      "hlSnow": "Snow expected — dress warm and watch for slippery ground",
+      "hlHot": "Hot day — guard against heat and sun",
+      "hlCold": "Cold day — dress for warmth",
+      "hlWindy": "Windy — be ready for gusts",
+      "hlFog": "Low visibility — take care when travelling",
+      "hlGood": "Good weather — well suited to outdoor sightseeing",
+      "hlCloudy": "Mostly cloudy — comfortable for a relaxed walk",
+      "hlMild": "Settled weather — your plan should work well",
+      "alThunderName": "Lightning",
+      "alThunder": "During thunderstorms keep away from the river and open high ground, and do not shelter under trees or metal structures.",
+      "alHeavyRainName": "Heavy rain",
+      "alHeavyRain": "Rain is intense — avoid valleys, low-lying ground and riverbanks, and watch for flash flooding.",
+      "alWindName": "Strong wind",
+      "alWind": "Wind has reached gale strength — keep clear of signs, temporary structures and riverside rocks.",
+      "alSnowName": "Snow and ice",
+      "alSnow": "Snow may settle and freeze — surfaces will be slippery, so watch your step.",
+      "alHeatName": "Heat",
+      "alHeat": "High temperatures — limit midday outdoor activity, drink water often and watch for heat-illness symptoms.",
+      "alColdName": "Severe cold",
+      "alCold": "Very low temperatures carry a risk of hypothermia outdoors. Shorten your visit and dress warmly.",
+      "alFogName": "Dense fog",
+      "alFog": "Visibility is very poor, so ferries, flights and driving may be delayed. Allow extra time.",
+      "alFooter": "Consider adjusting your itinerary, avoid hazardous areas such as hillsides and riverbanks, and keep checking the forecast.",
+      "rkThunder": "Lightning risk: do not climb hills, approach the water or shelter under trees.",
+      "rkHeavyRain": "Rain is heavy — avoid valleys, low-lying ground and waterside areas.",
+      "rkWind": "Wind is strong — keep clear of signs, temporary structures and riverside rocks.",
+      "rkFog": "Poor visibility may delay transport, so allow extra time.",
+      "rkUv": "UV is very strong; prolonged exposure can burn your skin.",
+      "rkHeat": "Heat makes heatstroke likely. If you feel dizzy or weak, rest in the shade immediately.",
+      "rkCold": "It feels very cold; keep warm and avoid standing still for long.",
+      "rkIcy": "Surfaces may be icy — slow down whether walking or driving.",
+      "rkRiver": "The Imjin River has a strong current. Stay behind the railings on the walkways and never enter the water.",
+      "rkTrail": "Nearby trails turn slippery after rain — mind loose stones and your footing.",
+      "rkNote": "Safety notes are judged automatically from current weather conditions and are not the same as officially issued warnings.",
+      "outSnow": "Snow is falling — wear warm, grippy footwear and watch for frostbite on hands and feet.",
+      "outRain": "Expect rain — a waterproof outer layer and non-slip shoes work best.",
+      "outHot": "High temperatures — choose light, breathable clothing and avoid long spells outdoors at midday.",
+      "outWarm": "Pleasantly warm — a short-sleeved top with a light jacket is enough.",
+      "outMild": "Comfortable temperatures — ordinary outdoor clothing is fine.",
+      "outCool": "On the cool side — add a jacket or long sleeves.",
+      "outCold": "Cold — bring a thick jacket, scarf and other warm layers.",
+      "outLayer": "A wide day-to-night temperature range — dress in layers you can add or remove.",
+      "outWind": "Strong wind — wear a close-fitting windproof outer layer and avoid loose clothing.",
+      "outUv": "Strong UV — long sleeves or a sun-protective layer help.",
+      "outHumid": "High humidity — breathable, quick-drying fabrics feel best.",
+      "plThunderWater": "Water-based and open-air activities will almost certainly be closed — switch to indoor routes.",
+      "plRainNoOutdoor": "Outdoor sightseeing is not advised; the gondola and boat trips may be suspended.",
+      "plRainPoorOutdoor": "Open-air activities will be disappointing — shorten outdoor stops and mix in indoor visits.",
+      "plRainIndoor": "Favour indoor venues and push outdoor or viewpoint stops later.",
+      "plFogView": "Low visibility makes viewpoints unrewarding — stay on close-range routes.",
+      "plFogTransport": "Ferries and flights may be delayed, so allow extra travel time.",
+      "plHeatShorten": "Shorten outdoor time, avoid midday and take more breaks.",
+      "plHeatIndoor": "Use the middle of the day for indoor visits and move outdoor stops to morning or evening.",
+      "plColdShorten": "Keep outdoor spells short and build in places to warm up and rest.",
+      "plWindWater": "River cruises and waterside activities may be suspended — check on-site notices.",
+      "plWindAerial": "Exposed high-level rides such as the gondola may stop running in strong wind.",
+      "plWindSecure": "Secure your hat and belongings so the wind cannot carry them off.",
+      "plSunrise": "On clear days the light is crisp — sunrise and sunset are the best times to look out and take photos.",
+      "plGoodDay": "Conditions are good — well suited to a full day out as planned.",
+      "plTrailWet": "Nearby trails and slopes are slippery — choose flat routes and walk slowly.",
+      "plSceneRiver": "The park opens out along the Imjin River, so wind and sun feel stronger here than in town — carry a layer and adjust as you go.",
+      "plFallback": "You can follow your plan as it stands — just check the live weather once more before setting out.",
+      "itRaincoat": "Rain jacket",
+      "itRaincoatNoLong": "Rain jacket (a long umbrella is not advisable in strong wind)",
+      "itUmbrella": "Umbrella or rain jacket",
+      "itFoldingUmbrella": "Folding umbrella",
+      "itSunKit": "Sunscreen, sunglasses, sun hat",
+      "itWater": "Plenty of drinking water",
+      "itHeatKit": "Heat-relief supplies",
+      "itLayer": "One layer you can add or remove",
+      "itWarmKit": "Thick jacket, scarf, gloves",
+      "itSparkleHat": "A bag that keeps your hat and belongings secure",
+      "itMask": "Face mask",
+      "itNonSlip": "Non-slip shoes",
+      "itInsect": "Insect repellent",
+      "itNone": "Nothing special needed"
+    }
+  },
+  "facilities": {
+    "title": "Facilities & Practical Information",
+    "subtitle": "Restrooms, parking, dining, lodging, groceries, fuel and charging — the practical questions visitors ask before arriving, organised by category.",
+    "neutralNote": "This is a non-profit information resource. We do not recommend any specific business or brand; only the type of facility, its location and how it works.",
+    "items": [
+      {
+        "icon": "🚻",
+        "name": "Restrooms",
+        "summary": "Public restrooms are distributed near the park entrances, main plazas and parking areas.",
+        "points": [
+          "Some restrooms include accessible stalls and baby-changing tables — check the signage.",
+          "Entrance-side restrooms get crowded on peak days and event days; the ones further inside are usually quieter.",
+          "In cold snaps, some facilities may be temporarily limited due to frozen pipes."
+        ]
+      },
+      {
+        "icon": "🅿️",
+        "name": "Parking",
+        "summary": "Several public and on-site car parks serve the park, and they can fill up early on holidays.",
+        "points": [
+          "Fees and operating hours vary by season and event — use the on-site signage as the reference.",
+          "Parking at linked facilities such as the gondola and observatory can also be used.",
+          "Weekday mornings and weekend afternoons are the busiest periods."
+        ]
+      },
+      {
+        "icon": "🍽️",
+        "name": "Dining & Cafés",
+        "summary": "Snack and drink outlets operate around the park, while full meals are concentrated in Munsan town and nearby tourist districts.",
+        "points": [
+          "Inside the park it is mostly coffee and light snacks; restaurants are more varied in town.",
+          "Convenience stores nearby carry boxed meals and simple food.",
+          "Check the designated outdoor eating areas and waste-disposal guidance first."
+        ]
+      },
+      {
+        "icon": "🏨",
+        "name": "Lodging",
+        "summary": "Accommodation is spread across the Munsan and Geumchon areas and the Heyri and Paju Book City districts.",
+        "points": [
+          "Hotels, resorts, pensions and guesthouses are all available — choose according to your itinerary and transport.",
+          "Munsan suits DMZ-linked itineraries; Heyri suits art and café-focused trips.",
+          "Book early for weekends and peak season."
+        ]
+      },
+      {
+        "icon": "🛒",
+        "name": "Convenience Stores & Groceries",
+        "summary": "Convenience stores and small supermarkets operate near the park and in Munsan town.",
+        "points": [
+          "Water, snacks, rain ponchos and insect repellent are worth buying in advance.",
+          "For larger grocery runs, the big stores in town are more practical.",
+          "Popular items can sell out early in peak season."
+        ]
+      },
+      {
+        "icon": "⛽",
+        "name": "Fuel & EV Charging",
+        "summary": "Petrol stations sit in Munsan town and along the Jayu-ro approach, and EV chargers are available at some park and nearby car parks.",
+        "points": [
+          "Charger specifications, fees and time limits vary by operator — check the app or on-site labels.",
+          "In the border area it is safer to set out with a full tank or a full charge.",
+          "Charging queues can get long in winter."
+        ]
+      },
+      {
+        "icon": "🏧",
+        "name": "ATMs & Currency",
+        "summary": "Cash withdrawals usually go through convenience-store or bank ATMs, while currency exchange is normally handled at banks in town or at the airport.",
+        "points": [
+          "Foreign-card acceptance varies from machine to machine.",
+          "Carrying a small amount of cash helps at markets and small shops.",
+          "Card and mobile payment work almost everywhere, but mobile coverage can be patchy."
+        ]
+      },
+      {
+        "icon": "🏥",
+        "name": "Medical & Pharmacy",
+        "summary": "Pharmacies and clinics are concentrated in Munsan town; the park itself does not sell over-the-counter medicine.",
+        "points": [
+          "For emergencies, call 119.",
+          "Pack basic medicine for summer bees and ticks and for winter slips and falls.",
+          "If you have a chronic condition, bring your medication and prescription."
+        ]
+      },
+      {
+        "icon": "♿",
+        "name": "Accessibility & Strollers",
+        "summary": "The lawn plaza and main walkways are relatively level, so wheelchairs and strollers move around fairly easily.",
+        "points": [
+          "Some dirt paths and slopes have uneven surfaces.",
+          "Accessible parking bays and accessible restrooms operate in some areas.",
+          "On slippery days, a stroller with larger wheels is safer."
+        ]
+      },
+      {
+        "icon": "🧳",
+        "name": "Lockers & Amenities",
+        "summary": "Locker-type storage and public Wi-Fi operate in some areas, though availability varies by season.",
+        "points": [
+          "Lockers are limited in size, so large suitcases may have to stay with you.",
+          "Check signage for drinking-water stations.",
+          "A power bank is the most reliable way to keep a phone charged."
+        ]
+      }
+    ],
+    "paymentTitle": "Payment & Fees",
+    "paymentNote": "The park itself is open free of charge, but linked facilities such as the gondola and observatory, plus parking, may charge a fee. Card and mobile payment are standard; carrying a little cash helps at smaller shops.",
+    "tipsTitle": "Good to Bring",
+    "tips": [
+      "The border area is windy, so a windproof rain jacket can work better than an umbrella.",
+      "Bring water and snacks to save time while moving between sites.",
+      "Taking your rubbish with you is encouraged.",
+      "Carry photo identification for security checkpoints."
+    ],
+    "disclaimer": "Facility availability, fees and opening hours can change with season and events. Please treat on-site signage and official notices as the authoritative source on the day of your visit."
+  },
+  "timeline": {
+    "title": "A Historical Timeline of Imjingak and the Imjin River",
+    "subtitle": "From a river crossing to a frontline, and now a place of peace. This timeline sets out the documented history of the Imjingak area.",
+    "items": [
+      { "era": "Goryeo–Joseon", "title": "The Imjin ferry crossing", "text": "The Imjin River was a military and transport artery linking the Han and Yesong river systems. The name Imjin (臨津) is traditionally explained as reaching the ferry crossing, and people and goods moved along its fords and ferry routes." },
+      { "era": "1592", "title": "The Imjin War and the river defence line", "text": "Early in the Imjin War, invading forces crossed the river and pushed north, making the Imjin a defensive line on the road to Hanyang. Records describe the river as a geographic gateway that shaped the course of the war." },
+      { "era": "1906", "title": "The Gyeongui Line and the Imjin rail bridge", "text": "With the opening of the Gyeongui railway, a bridge was built across the Imjin, turning Munsan and Jangdan into railway junctions. The remaining Imjin rail bridge and Jangdan station heritage date from this era." },
+      { "era": "1950–1953", "title": "The Korean War and the Armistice", "text": "During the Korean War the Imjin area saw heavy fighting, and the 1953 Armistice Agreement drew the line that divided North and South. The Imjin became a river symbolising division." },
+      { "era": "1953", "title": "Freedom Bridge and prisoner exchange", "text": "After the armistice, a temporary bridge was laid across the Imjin for the exchange of prisoners, and it became known as Freedom Bridge. It remains today as a monument, with access restricted." },
+      { "era": "1972", "title": "Imjingak is established", "text": "Imjingak was built to comfort families separated by the war and to express the hope for reunification. It became the first stop for visitors to the border area." },
+      { "era": "1985", "title": "The Mangbaedan altar", "text": "An altar was created so that displaced people could bow toward their northern hometowns. Every Lunar New Year and Chuseok, ceremonies for separated families are held there." },
+      { "era": "2004", "title": "The Jangdan steam locomotive is moved here", "text": "A steam locomotive that had stood stranded on the tracks since the Korean War was moved to Imjingak and put on display, together with the well-known line: the iron horse wants to run." },
+      { "era": "2005", "title": "Wind Hill is created", "text": "On the hill behind Imjingak, around 3,000 pinwheels were installed to form Wind Hill. The pinwheels became a symbol of the wish for peace and reunification." },
+      { "era": "2018 onwards", "title": "Peace tourism expands", "text": "The inter-Korean summits renewed interest in the border region, and the Imjingak area grew into a space combining history and peace education with tourism." }
+    ],
+    "note": "This timeline is compiled from publicly available records and visitor materials; individual dates may vary between sources."
+  },
+  "nature": {
+    "title": "Reading the Imjin River Through Geography and Ecology",
+    "subtitle": "Why Imjingak stands where it does, and what the river and its estuary mean ecologically.",
+    "topics": [
+      {
+        "icon": "🌊",
+        "name": "River width and flow",
+        "lead": "The Imjin has a large basin and a wide channel, so the water seen from Imjingak looks more like a lake than a river.",
+        "points": [
+          "Its estuary is close to the Han River confluence, so it is partly affected by tides.",
+          "Heavy rain upstream is reflected quickly in downstream water levels.",
+          "The far bank lies beyond the civilian control line, so the river itself acts as the boundary."
+        ]
+      },
+      {
+        "icon": "🦆",
+        "name": "Migratory birds and the estuary",
+        "lead": "The estuary where the Han and Imjin meet is known as a major wintering ground for migratory birds.",
+        "points": [
+          "Whooper swans, white-naped cranes and geese are observed in winter.",
+          "Restricted access has helped preserve the habitat relatively well.",
+          "Binoculars and cold-weather gear make observation much easier."
+        ]
+      },
+      {
+        "icon": "⛰️",
+        "name": "Landform and geology",
+        "lead": "The Imjin basin combines low hills shaped by long erosion with broad alluvial plains.",
+        "points": [
+          "Riverside deposits record repeated cycles of flooding and sedimentation.",
+          "The surrounding hills are gentle, so walking routes are not demanding.",
+          "Granite terrain and basalt plateaus define the local geology."
+        ]
+      },
+      {
+        "icon": "🌫️",
+        "name": "Fog and climate",
+        "lead": "High humidity around the river and estuary brings frequent early-morning fog, and winters bring long cold spells.",
+        "points": [
+          "The daily temperature range is wide, so a jacket helps in the morning and evening.",
+          "Spring and autumn fog can limit visibility.",
+          "In midwinter, wind off the water makes the felt temperature much lower."
+        ]
+      },
+      {
+        "icon": "🌾",
+        "name": "Plains and farming",
+        "lead": "The broad plain south of the Imjin has long been called a granary and is still farmed today.",
+        "points": [
+          "The Jangdan area has long been known for bean sprouts and ginseng.",
+          "The look of the paddies and fields changes markedly with the seasons.",
+          "Farmland meeting the border zone creates a distinctive landscape."
+        ]
+      },
+      {
+        "icon": "🌿",
+        "name": "Biodiversity of the border zone",
+        "lead": "Decades of restricted human access have made the border zone an unexpectedly rich habitat.",
+        "points": [
+          "Cranes, water deer and wild boar are reported to live in the area.",
+          "Wetlands and riverside vegetation are well developed.",
+          "Ecological surveys are limited and focus on restricted-access zones."
+        ]
+      }
+    ],
+    "note": "The ecology and geology notes summarise publicly available survey material; observations vary with season and survey timing."
+  },
+  "legends": {
+    "title": "Stories Preserved in Place Names and Oral Lore",
+    "subtitle": "Names such as Imjin and Jangdan, and the stories told around the river, show how people have remembered this place over time.",
+    "frameNote": "What follows collects the folk origins of local place names, oral tradition, and phrases that survive in documents and songs. Read them as stories that have been passed down, not as confirmed events.",
+    "items": [
+      {
+        "icon": "🛶",
+        "name": "The name Imjin (臨津)",
+        "text": "The name of the Imjin River is traditionally traced to the characters 臨津, explained as reaching the ferry crossing. It marks the spot where a crossing stood, reflecting how long this river served as a route for people and goods.",
+        "aside": "Records also tell of several crossings that carried the same name."
+      },
+      {
+        "icon": "🌾",
+        "name": "The long rapids of Jangdan (長湍)",
+        "text": "Jangdan is traditionally explained as long rapids — a place where the current ran in a long stretch of shallow water. The name still survives as a place name along the Imjin.",
+        "aside": "The Jangdan area has long been known for its bean sprouts."
+      },
+      {
+        "icon": "🚂",
+        "name": "The iron horse wants to run",
+        "text": "Of the steam locomotive stranded at Jangdan station, people said the iron horse wants to run. The wish for a stopped train to move again was read as a wish for the division itself to end.",
+        "aside": "The phrase is now widely used as a symbol of the Imjingak area."
+      },
+      {
+        "icon": "🎡",
+        "name": "Three thousand ri of land, three thousand pinwheels",
+        "text": "The roughly 3,000 pinwheels on Wind Hill are linked in storytelling to the old expression three thousand ri of embroidered rivers and mountains, a way of naming the Korean peninsula. One pinwheel stands for one village; together they stand for the whole peninsula.",
+        "aside": "The meaning of the number is conveyed through the artist's account and on-site interpretation."
+      },
+      {
+        "icon": "🌙",
+        "name": "The waiting kept at Mangbaedan",
+        "text": "At Lunar New Year and Chuseok, people gather at the Mangbaedan altar and bow toward the north. This scene of people who could not return home facing the same direction from the same spot is one of the defining images of Imjingak.",
+        "aside": "It repeats at the same hour and the same place each year, which makes it a landscape unique to this site."
       }
     ]
   },

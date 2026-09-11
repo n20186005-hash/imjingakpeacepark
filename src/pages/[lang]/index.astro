@@ -7,6 +7,12 @@ import QuickFactsDashboard from '../../components/QuickFactsDashboard.astro';
 import ComplianceGuide from '../../components/ComplianceGuide.astro';
 import HigashiyamaRoute from '../../components/HigashiyamaRoute.astro';
 import Intro from '../../components/Intro.astro';
+import EntityOverview from '../../components/EntityOverview.astro';
+import WeatherForecast from '../../components/WeatherForecast.astro';
+import HeritageTimeline from '../../components/HeritageTimeline.astro';
+import LegendsLore from '../../components/LegendsLore.astro';
+import NatureDeepRead from '../../components/NatureDeepRead.astro';
+import Facilities from '../../components/Facilities.astro';
 import Transport from '../../components/Transport.astro';
 import Lodging from '../../components/Lodging.astro';
 import HumanitiesDossier from '../../components/HumanitiesDossier.astro';
@@ -15,6 +21,7 @@ import Gallery from '../../components/Gallery.astro';
 import FeaturedQuotes from '../../components/FeaturedQuotes.astro';
 import HiddenRules from '../../components/HiddenRules.astro';
 import Reviews from '../../components/Reviews.astro';
+import SourcesSection from '../../components/SourcesSection.astro';
 import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
 import FAQ from '../../components/FAQ.astro';
@@ -49,13 +56,19 @@ const faqLd = (() => {
   <SectionNav />
   <Hero />
   <QuickFactsDashboard />
+  <WeatherForecast />
   <Intro />
+  <EntityOverview />
+  <HeritageTimeline />
   <HumanitiesDossier />
+  <LegendsLore />
+  <NatureDeepRead />
   <DeepDive />
   <Transport />
   <HigashiyamaRoute />
   <HiddenRules />
   <ComplianceGuide />
+  <Facilities />
   <Lodging />
   <MapEmbed />
   <FAQ />
@@ -63,4 +76,5 @@ const faqLd = (() => {
   <Gallery />
   <FeaturedQuotes />
   <Reviews />
+  <SourcesSection />
 </BaseLayout>

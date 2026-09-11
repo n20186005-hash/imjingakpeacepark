@@ -1,0 +1,45 @@
+---
+import { getI18n } from '../i18n/ui';
+const { messages } = getI18n(Astro.url);
+const l = messages.legends ?? {};
+const items = l.items ?? [];
+---
+
+<section id="legends" class="section-padding" style="background: var(--bg-primary);">
+  <div class="max-w-4xl mx-auto px-4">
+    <h2 class="font-display text-3xl sm:text-4xl font-semibold mb-3 text-center" style="color: var(--text-primary);">
+      {l.title}
+    </h2>
+    <p class="text-center text-base sm:text-lg mb-4 max-w-3xl mx-auto" style="color: var(--text-secondary);">
+      {l.subtitle}
+    </p>
+    {l.frameNote && (
+      <p
+        class="text-center text-sm mb-10 max-w-3xl mx-auto rounded-2xl px-4 py-3"
+        style="background: var(--bg-tertiary); color: var(--text-secondary);"
+      >
+        📖 {l.frameNote}
+      </p>
+    )}
+
+    <div class="space-y-5">
+      {items.map((item) => (
+        <article
+          class="rounded-2xl border p-6"
+          style="border-color: var(--border-color); background: var(--card-bg);"
+        >
+          <h3 class="font-display text-lg sm:text-xl font-semibold mb-2.5 flex items-start gap-3" style="color: var(--text-primary);">
+            <span class="text-2xl leading-none" aria-hidden="true">{item.icon}</span>
+            <span>{item.name}</span>
+          </h3>
+          <p class="text-sm sm:text-base leading-relaxed" style="color: var(--text-secondary);">{item.text}</p>
+          {item.aside && (
+            <p class="mt-3 text-sm leading-relaxed pl-4 border-l-2" style="color: var(--text-muted); border-color: var(--border-color);">
+              {item.aside}
+            </p>
+          )}
+        </article>
+      ))}
+    </div>
+  </div>
+</section>

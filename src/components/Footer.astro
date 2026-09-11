@@ -3,6 +3,7 @@ import { getI18n } from '../i18n/ui';
 const { lang, messages } = getI18n(Astro.url);
 const f = messages.footer;
 const links = f.officialLinksList ?? [];
+const tel = (f.napPhone ?? '').replace(/[^+0-9]/g, '');
 ---
 
 <footer class="section-padding" style="background: var(--bg-tertiary); border-top: 1px solid var(--border-color);">
@@ -15,6 +16,27 @@ const links = f.officialLinksList ?? [];
       <div>
         <h3 class="font-display text-xl font-semibold mb-3" style="color: var(--text-primary);" set:html={f.siteName}></h3>
         <p class="text-sm leading-relaxed" style="color: var(--text-secondary);">{f.rights}</p>
+
+        <!-- NAP 一致性：名称 / 地址 / 电话与 Google 地图资料保持一致 -->
+        {f.napTitle && (
+          <div class="mt-5 text-sm space-y-2" style="color: var(--text-secondary);">
+            <p class="font-semibold" style="color: var(--text-primary);">{f.napTitle}</p>
+            <p class="leading-relaxed">
+              <span class="font-medium" style="color: var(--text-muted);">{f.napNameLabel}：</span>
+              {f.napName}
+            </p>
+            <p class="leading-relaxed">
+              <span class="font-medium" style="color: var(--text-muted);">{f.napAddressLabel}：</span>
+              {f.napAddress}
+            </p>
+            {f.napPhone && (
+              <p class="leading-relaxed">
+                <span class="font-medium" style="color: var(--text-muted);">{f.napPhoneLabel}：</span>
+                <a href={`tel:${tel}`} class="hover:opacity-70" style="color: var(--accent);">{f.napPhone}</a>
+              </p>
+            )}
+          </div>
+        )}
       </div>
 
       <div>
@@ -37,6 +59,13 @@ const links = f.officialLinksList ?? [];
               {f.mapsLabel}
             </a>
           </li>
+          {f.govTourismUrl && (
+            <li class="pt-2 border-t" style="border-color: var(--border-color);">
+              <a href={f.govTourismUrl} target="_blank" rel="noopener noreferrer" class="hover:opacity-70 font-medium" style="color: var(--accent);">
+                {f.govTourismLabel} ↗
+              </a>
+            </li>
+          )}
         </ul>
       </div>
 
@@ -54,6 +83,9 @@ const links = f.officialLinksList ?? [];
       <p class="leading-relaxed" set:html={f.disclaimer}></p>
       {f.dataSourceLabel && f.dataSource && (
         <p class="mt-3 leading-relaxed"><span class="font-medium" style="color: var(--text-secondary);">{f.dataSourceLabel}：</span> <span set:html={f.dataSource}></span></p>
+      )}
+      {f.imageRights && (
+        <p class="mt-3 leading-relaxed" style="color: var(--text-muted);">🖼️ {f.imageRights}</p>
       )}
     </div>
   </div>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Imjingak Pyeonghwa Nuri Park">
+  <rect width="512" height="512" fill="#0f2015"/>
+  <g fill="none" stroke-width="11" stroke-linecap="round">
+    <g stroke="#f4d58a" transform="translate(216 220)">
+      <path d="M0 0 L0 -68"/>
+      <path d="M0 0 L64 -18"/>
+      <path d="M0 0 L42 58"/>
+      <path d="M0 0 L-59 37"/>
+      <circle cx="0" cy="0" r="12" fill="#f4d58a" stroke="none"/>
+    </g>
+  </g>
+  <g stroke="#7fb2d6" stroke-width="13" stroke-linecap="round">
+    <path d="M216 220 L216 352"/>
+    <path d="M150 366 Q256 328 362 366"/>
+  </g>
+</svg>

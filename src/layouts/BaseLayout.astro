@@ -5,6 +5,7 @@ import NoticeBanner from '../components/NoticeBanner.astro';
 import Footer from '../components/Footer.astro';
 import { getLangFromUrl, buildAlternates, htmlLangAttr, getI18n } from '../i18n/ui';
 import { ogLocale, siteConfig } from '../config';
+import { entity } from '../config/entity';
 
 interface Props {
   title: string;
@@ -20,32 +21,48 @@ const canonical = alts[lang] ?? alts.ko;
 const { messages } = getI18n(Astro.url);
 const schema = messages.schema ?? {};
 
+const entityFullName = entity.fullNameLocal[lang] ?? entity.fullName;
+const ogImage = entity.heroImage;
+const ogImageAlt = `${entityFullName} — main view in ${entity.city}, ${entity.country}`;
+
+// 合并官方外链，保证 News/Knowledge Graph 与地图、旅游局门户互链（去重）
+const sameAs = Array.from(
+  new Set([
+    entity.mapsShareUrl,
+    entity.govtTourismUrl,
+    ...(schema.sameAs ?? []),
+  ]),
+);
+
 const jsonLd = {
   '@context': 'https://schema.org',
-  '@type': 'TouristAttraction',
-  name: schema.name ?? 'Imjingak Pyeonghwa Nuri Park',
-  alternateName: schema.alternateName ?? ['임진각 평화누리공원'],
+  // TouristAttraction 为主类型；并列 Park，帮助搜索引擎把页面锚定到「公园」这一实体类别
+  '@type': ['TouristAttraction', 'Park'],
+  // @id —— 帮助搜索引擎在 Knowledge Graph 中精确锚定该实体节点
+  '@id': `${entity.baseUrl}/#attraction`,
+  name: schema.name ?? entity.fullName,
+  alternateName: schema.alternateName ?? [entity.shortName, entity.fullName],
   description: schema.description ?? messages.meta.description,
   url: canonical,
   mainEntityOfPage: canonical,
-  image: schema.image ?? [
-    'https://imjingakpeacepark.com/gallery/imjingak-pyeonghwa-nuri-park-1.jpg',
-    'https://imjingakpeacepark.com/gallery/imjingak-pyeonghwa-nuri-park-3.jpg',
-  ],
+  image: schema.image ?? entity.images,
   touristType: schema.touristType ?? ['History travelers', 'Families', 'Photographers'],
   address: {
     '@type': 'PostalAddress',
-    streetAddress: schema.streetAddress ?? '148-40 Imjingak-ro, Munsan-eup',
-    addressLocality: schema.addressLocality ?? 'Paju-si',
-    addressRegion: schema.addressRegion ?? 'Gyeonggi-do',
-    postalCode: schema.postalCode ?? '10808',
-    addressCountry: 'KR',
+    streetAddress: schema.streetAddress ?? entity.streetAddress,
+    addressLocality: schema.addressLocality ?? entity.addressLocality,
+    addressRegion: schema.addressRegion ?? entity.addressRegion,
+    postalCode: schema.postalCode ?? entity.postalCode,
+    addressCountry: entity.countryCode,
   },
+  // NAP 一致性：电话与地图资料保持完全一致
+  telephone: entity.telephone,
   geo: {
     '@type': 'GeoCoordinates',
-    latitude: schema.latitude ?? 37.8902,
-    longitude: schema.longitude ?? 126.7702,
+    latitude: schema.latitude ?? entity.latitude,
+    longitude: schema.longitude ?? entity.longitude,
   },
+  hasMap: entity.mapsShareUrl,
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
@@ -70,7 +87,7 @@ const jsonLd = {
     ratingValue: '4.4',
     reviewCount: '7477',
   },
-  sameAs: schema.sameAs ?? ['https://maps.app.goo.gl/dUgMXau27SzsDpqQ9'],
+  sameAs,
 };
   const breadcrumbLd = (() => {
     const bc = messages.breadcrumb;
@@ -106,7 +123,22 @@ const jsonLd = {
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:locale" content={ogLocale[lang] ?? lang} />
+    <meta property="og:site_name" content={entityFullName} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:alt" content={ogImageAlt} />
     <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content={ogImageAlt} />
+
+    <!-- PWA / 品牌图标 -->
+    <link rel="manifest" href="/manifest.webmanifest" />
+    <link rel="icon" type="image/svg+xml" href="/icons/icon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.svg" />
+    <meta name="theme-color" content="#0f2015" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content={entity.shortName} />
 
     <script type="application/ld+json" is:inline set:html={JSON.stringify(jsonLd)}></script>
     <script type="application/ld+json" is:inline set:html={JSON.stringify(breadcrumbLd)}></script>
@@ -120,6 +152,15 @@ const jsonLd = {
           }
         } catch (e) {}
       })();
+    </script>
+
+    <!-- PWA：注册 Service Worker -->
+    <script is:inline>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', function () {
+          navigator.serviceWorker.register('/sw.js').catch(function () {});
+        });
+      }
     </script>
 
     <!-- Google tag (gtag.js) -->

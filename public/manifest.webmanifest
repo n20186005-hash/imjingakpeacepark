@@ -1,0 +1,34 @@
+{
+  "name": "Imjingak Pyeonghwa Nuri Park — Visitor Guide",
+  "short_name": "Imjingak Park",
+  "description": "Independent visitor guide to Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) in Paju-si, Gyeonggi-do, South Korea: location, transport, history, landmarks and travel tips.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#0f2015",
+  "theme_color": "#0f2015",
+  "lang": "ko",
+  "dir": "ltr",
+  "categories": ["travel", "education", "navigation"],
+  "icons": [
+    {
+      "src": "/icons/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/maskable.svg",
+      "sizes": "512x512",
+      "type": "image/svg+xml",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    { "name": "Location & Map", "url": "/ko/#map" },
+    { "name": "Visit Guide", "url": "/ko/#visit" },
+    { "name": "History", "url": "/ko/#history" }
+  ]
+}

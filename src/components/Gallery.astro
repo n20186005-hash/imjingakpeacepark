@@ -7,7 +7,11 @@ const images = Array.from({ length: totalImages }, (_, i) => {
   const n = String(i + 1);
   return `/gallery/imjingak-pyeonghwa-nuri-park-${n}.jpg`;
 });
-const photoAlts = g.photoAlts ?? images.map(() => g.photoAlt);
+// alt 统一前缀「景点名 + 城市」，让图片检索也能命中 Imjingak / Paju 等关键词，同时保留原有的画面描述
+const altPrefix = g.photoAltPrefix ? `${g.photoAltPrefix} — ` : '';
+const photoAlts = (g.photoAlts ?? images.map(() => g.photoAlt)).map(
+  (alt: string) => `${altPrefix}${alt}`,
+);
 ---
 
 <section id="gallery" class="section-padding" style="background: var(--bg-secondary);">
