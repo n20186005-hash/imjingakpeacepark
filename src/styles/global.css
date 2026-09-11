@@ -90,8 +90,16 @@ h1, h2, h3, h4, h5, h6 {
   display: none !important;
 }
 
-/* Map container */
+/* Map container —— 显式兜底尺寸，避免 iframe 未撑开时容器塌陷成一条细边 */
+.map-container {
+  border-radius: 12px;
+  background: var(--bg-tertiary);
+}
+
 .map-container iframe {
+  display: block;
+  width: 100%;
+  min-height: 320px;
   border: 0;
   border-radius: 12px;
 }

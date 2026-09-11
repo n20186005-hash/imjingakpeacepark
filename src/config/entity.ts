@@ -17,7 +17,7 @@
  * | {{LATITUDE}}                | latitude                                          |
  * | {{LONGITUDE}}               | longitude                                         |
  * | {{MAPS_SHARE_URL}}          | mapsShareUrl                                      |
- * | {{MAPS_EMBED_SRC}}          | mapsEmbedSrc                                      |
+ * | {{MAPS_EMBED_SRC}}          | mapsEmbedSrc(lang)                                |
  * | {{NEARBY_LANDMARK_1}}       | nearbyLandmarks[0]                                |
  * | {{NEARBY_LANDMARK_2}}       | nearbyLandmarks[1]                                |
  * | {{GOVT_TOURISM_URL}}        | govtTourismUrl                                    |
@@ -90,9 +90,15 @@ export const entity = {
 
   /** {{MAPS_SHARE_URL}} */
   mapsShareUrl: 'https://maps.app.goo.gl/dUgMXau27SzsDpqQ9',
-  /** {{MAPS_EMBED_SRC}} —— Google 地图 iframe 的 src（临津阁和平公园） */
-  mapsEmbedSrc:
-    'https://www.google.com/maps/embed?pb=!1m5!3m1!1s0x357cf22deb81b203:0xa1f289873f84d1a2!2z5Li05rSl6ZiB5ZKM5bmz5YWs5Zut!5e1!3m2!1szh-CN!2sus!4v1789098227767!5m2!1szh-CN!2sus',
+  /**
+   * {{MAPS_EMBED_SRC}} —— Google 地图 iframe（临津阁和平公园）的固定部分。
+   *
+   * 链接中 `!3m2!1s<hl>!2sus` 与 `!5m2!1s<hl>!2sus` 两处都是「地图界面语言」，
+   * 必须同时替换，只改一处会让地图回落到默认语言。因此这里只保留不变的部分，
+   * 由下方的 mapsEmbedSrc(lang) 按当前页面语言拼出完整链接。
+   */
+  mapsEmbedPb:
+    '!1m5!3m1!1s0x357cf22deb81b203:0xa1f289873f84d1a2!2z5Li05rSl6ZiB5ZKM5bmz5YWs5Zut!5e1',
 
   /** {{GOVT_TOURISM_URL}} —— 权威政府/官方旅游门户 */
   govtTourismUrl: 'https://ggtour.or.kr/dmz/',
@@ -115,3 +121,15 @@ export const entity = {
 } as const;
 
 export type Entity = typeof entity;
+
+/**
+ * 生成与页面语言一致的 Google 地图嵌入链接。
+ *
+ * pb 参数里的 hl（地图界面语言）出现两次，这里统一按同一语言替换，
+ * 保证任意语言页面上的地图都用该语言显示地名与界面按钮。
+ *
+ * @param hl 地图界面语言，取值与 <html lang> 一致：zh-CN / en / ja / ko
+ */
+export function mapsEmbedSrc(hl: string): string {
+  return `https://www.google.com/maps/embed?pb=${entity.mapsEmbedPb}!3m2!1s${hl}!2sus!4v1789098227767!5m2!1s${hl}!2sus`;
+}

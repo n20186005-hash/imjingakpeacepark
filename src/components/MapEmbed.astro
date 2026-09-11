@@ -1,8 +1,10 @@
 ---
-import { getI18n } from '../i18n/ui';
-import { entity } from '../config/entity';
-const { messages } = getI18n(Astro.url);
+import { getI18n, htmlLangAttr } from '../i18n/ui';
+import { entity, mapsEmbedSrc } from '../config/entity';
+const { lang, messages } = getI18n(Astro.url);
 const m = messages.mapSection;
+// 地图界面语言跟随页面语言：zh → zh-CN，en / ja / ko 原样，与 <html lang> 保持一致
+const embedSrc = mapsEmbedSrc(htmlLangAttr(lang));
 const e = messages.entity ?? {};
 const nearbyTitle = messages.recommendations?.attractionsTitle ?? 'Nearby landmarks';
 const nearby = entity.nearbyLandmarks;
@@ -16,10 +18,10 @@ const govUrl = e.govLinkUrl ?? entity.govtTourismUrl;
 
     <div class="map-container overflow-hidden border" style="border-color: var(--map-border);">
       <iframe
-        src={entity.mapsEmbedSrc}
-        class="w-full h-[320px] sm:h-[420px]"
-        width="100%"
-        height="420"
+        src={embedSrc}
+        width="600"
+        height="450"
+        class="w-full h-[320px] sm:h-[450px]"
         style="border:0;"
         loading="lazy"
         allowfullscreen
