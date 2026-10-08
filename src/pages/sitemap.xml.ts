@@ -9,6 +9,11 @@ const routes: { path: string; priority: string; changefreq: string }[] = [
   { path: 'privacy-policy', priority: '0.3', changefreq: 'yearly' },
   { path: 'terms-of-service', priority: '0.3', changefreq: 'yearly' },
   { path: 'cookie-settings', priority: '0.3', changefreq: 'yearly' },
+  { path: 'getting-there', priority: '0.7', changefreq: 'monthly' },
+  { path: 'getting-there-by-train', priority: '0.6', changefreq: 'monthly' },
+  { path: 'getting-there-by-bus', priority: '0.6', changefreq: 'monthly' },
+  { path: 'imjingak-dmz-guide', priority: '0.7', changefreq: 'monthly' },
+  { path: 'photos', priority: '0.6', changefreq: 'monthly' },
 ];
 
 export const GET: APIRoute = () => {

@@ -1,8 +1,11 @@
 ---
 import { getI18n } from '../i18n/ui';
 import { entity } from '../config/entity';
-const { messages } = getI18n(Astro.url);
+import { topicLinksByLang } from '../i18n/topicLinks';
+const { lang, messages } = getI18n(Astro.url);
 const h = messages.hero;
+const links = topicLinksByLang[lang] ?? topicLinksByLang.en;
+const dmzLink = links.items.find((it) => it.slug === 'imjingak-dmz-guide');
 const facts = h.quickFacts ?? [];
 const live = h.liveInfo ?? {};
 const planner = h.sunsetPlanner ?? {};
@@ -132,6 +135,14 @@ const aliases = (messages.schema?.alternateName ?? []).filter((a: string) => a !
         {h.openMaps}
       </a>
     </div>
+
+    {dmzLink && (
+      <div class="mt-3">
+        <a href={`/${lang}/imjingak-dmz-guide`} class="inline-flex items-center gap-1.5 text-sm text-white/80 underline underline-offset-4 hover:text-white transition">
+          <span aria-hidden="true">🕊️</span> {dmzLink.cta} <span aria-hidden="true">→</span>
+        </a>
+      </div>
+    )}
   </div>
 
   <script is:inline>

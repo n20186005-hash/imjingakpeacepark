@@ -1,7 +1,10 @@
 ---
 import { getI18n } from '../i18n/ui';
-const { messages } = getI18n(Astro.url);
+import { topicLinksByLang } from '../i18n/topicLinks';
+const { lang, messages } = getI18n(Astro.url);
 const section = messages.transportSection;
+const links = topicLinksByLang[lang] ?? topicLinksByLang.en;
+const gettingThereLink = links.items.find((it) => it.slug === 'getting-there');
 ---
 
 <section id="transport" class="section-padding" style="background: var(--bg-secondary);">
@@ -131,6 +134,13 @@ const section = messages.transportSection;
             </details>
           ))}
         </div>
+      </div>
+    )}
+    {gettingThereLink && (
+      <div class="text-center mt-10">
+        <a href={`/${lang}/getting-there`} class="inline-flex items-center gap-2 text-base font-medium transition hover:underline" style="color: var(--accent);">
+          <span aria-hidden="true">→</span> {gettingThereLink.cta}
+        </a>
       </div>
     )}
   </div>

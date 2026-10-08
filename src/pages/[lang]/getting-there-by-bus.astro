@@ -1,0 +1,9 @@
+---
+import TopicPage from '../../components/TopicPage.astro';
+import { languagesList } from '../../i18n/ui';
+
+export function getStaticPaths() {
+  return languagesList.map((lang) => ({ params: { lang } }));
+}
+
+<TopicPage topicKey="gettingThereBus" path="getting-there-by-bus" />

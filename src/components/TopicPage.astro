@@ -1,0 +1,120 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Breadcrumbs from './Breadcrumbs.astro';
+import SourcesSection from './SourcesSection.astro';
+import { getI18n } from '../i18n/ui';
+import { topicLinksByLang } from '../i18n/topicLinks';
+
+interface Props {
+  topicKey: string;
+  path: string;
+}
+const { topicKey, path } = Astro.props;
+const { lang, messages } = getI18n(Astro.url);
+const tp: any = messages[topicKey] ?? {};
+const sections: any[] = tp.sections ?? [];
+const gallerySections: any[] = tp.gallerySections ?? [];
+const faq = tp.faq;
+
+const TOPIC_SLUG: Record<string, string> = {
+  gettingThere: 'getting-there',
+  gettingThereTrain: 'getting-there-by-train',
+  gettingThereBus: 'getting-there-by-bus',
+  dmzGuide: 'imjingak-dmz-guide',
+  photos: 'photos',
+};
+const HOME_ANCHOR: Record<string, string> = {
+  gettingThere: '#transport',
+  gettingThereTrain: '#transport',
+  gettingThereBus: '#transport',
+  dmzGuide: '#overview',
+  photos: '#gallery',
+};
+const linkData = topicLinksByLang[lang] ?? topicLinksByLang.en;
+const currentSlug = TOPIC_SLUG[topicKey];
+const related = linkData.items.filter((it) => it.slug !== currentSlug);
+const homeHref = `/${lang}${HOME_ANCHOR[topicKey] ?? ''}`;
+
+const faqLd = (() => {
+  if (!faq?.categories) return null;
+  const mainEntity = faq.categories.flatMap((cat: any) =>
+    (cat.items ?? []).map((item: any) => ({
+      '@type': 'Question',
+      name: item.q,
+      acceptedAnswer: { '@type': 'Answer', text: item.a },
+    })),
+  );
+  return { '@context': 'https://schema.org', '@type': 'FAQPage', mainEntity };
+})();
+---
+
+<BaseLayout title={tp.title} description={tp.description} path={path}>
+  {faqLd && (
+    <script slot="head" type="application/ld+json" is:inline set:html={JSON.stringify(faqLd)}></script>
+  )}
+  <Breadcrumbs />
+  <article class="max-w-4xl mx-auto px-4 py-10">
+    <h1 class="font-display text-3xl sm:text-4xl font-semibold mb-4" style="color: var(--text-primary);">{tp.title}</h1>
+    {tp.intro && <p class="text-lg leading-relaxed mb-10" style="color: var(--text-secondary);">{tp.intro}</p>}
+
+    {sections.map((s) => (
+      <section class="mb-10">
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-3" style="color: var(--text-primary);">{s.title}</h2>
+        <p class="text-base sm:text-lg leading-relaxed" style="color: var(--text-secondary);">{s.body}</p>
+      </section>
+    ))}
+
+    {gallerySections.length > 0 && (
+      <div class="space-y-12">
+        {gallerySections.map((gs) => (
+          <section>
+            <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-3" style="color: var(--text-primary);">{gs.title}</h2>
+            {gs.body && <p class="text-base sm:text-lg leading-relaxed mb-6" style="color: var(--text-secondary);">{gs.body}</p>}
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+              {gs.images.map((img: any) => (
+                <figure class="rounded-2xl overflow-hidden border" style="border-color: var(--border-color); background: var(--card-bg);">
+                  <img src={img.src} alt={img.alt} loading="lazy" class="w-full aspect-[4/3] object-cover" />
+                  {img.caption && <figcaption class="p-3 text-sm" style="color: var(--text-secondary);">{img.caption}</figcaption>}
+                </figure>
+              ))}
+            </div>
+          </section>
+        ))}
+      </div>
+    )}
+
+    {faq?.categories && (
+      <section id="faq" class="mt-14">
+        <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-6" style="color: var(--text-primary);">{faq.title}</h2>
+        <div class="space-y-3">
+          {faq.categories.flatMap((cat: any) => cat.items ?? []).map((item: any) => (
+            <details class="group bg-white/5 rounded-xl border border-white/10 overflow-hidden">
+              <summary class="flex items-start justify-between gap-4 cursor-pointer list-none p-4 font-medium" style="color: var(--text-primary);">
+                <span>{item.q}</span>
+                <span class="shrink-0 text-xl transition-transform group-open:rotate-180" style="color: var(--accent);" aria-hidden="true">⌄</span>
+              </summary>
+              <p class="px-4 pb-4 text-base leading-relaxed" style="color: var(--text-secondary);">{item.a}</p>
+            </details>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <section class="mt-14">
+      <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-6" style="color: var(--text-primary);">{linkData.title}</h2>
+      <div class="grid gap-4 sm:grid-cols-2">
+        {related.map((it) => (
+          <a href={`/${lang}/${it.slug}`} class="block rounded-2xl border p-5 transition hover:shadow-lg" style="border-color: var(--border-color); background: var(--card-bg); color: var(--text-primary);">
+            <div class="text-xs uppercase tracking-wide" style="color: var(--accent);">{it.kicker}</div>
+            <div class="mt-1 font-medium">{it.label}</div>
+            <div class="mt-2 text-sm" style="color: var(--text-secondary);">{it.desc}</div>
+          </a>
+        ))}
+      </div>
+      <a href={homeHref} class="mt-5 inline-flex items-center gap-2 text-sm font-medium transition hover:underline" style="color: var(--accent);">
+        <span aria-hidden="true">←</span> {linkData.backLabel}
+      </a>
+    </section>
+  </article>
+  <SourcesSection />
+</BaseLayout>

@@ -26,13 +26,15 @@ import MapEmbed from '../../components/MapEmbed.astro';
 import DeepDive from '../../components/DeepDive.astro';
 import FAQ from '../../components/FAQ.astro';
 import { getI18n, languagesList } from '../../i18n/ui';
+import { topicLinksByLang } from '../../i18n/topicLinks';
 
 export function getStaticPaths() {
   return languagesList.map((lang) => ({ params: { lang } }));
 }
 
-const { messages } = getI18n(Astro.url);
+const { lang, messages } = getI18n(Astro.url);
 const faq = messages.faq;
+const topicLinks = topicLinksByLang[lang] ?? topicLinksByLang.en;
 const faqLd = (() => {
   const categories = faq?.categories ?? [];
   const mainEntity = categories.flatMap((cat) =>
@@ -76,5 +78,17 @@ const faqLd = (() => {
   <Gallery />
   <FeaturedQuotes />
   <Reviews />
+  <section class="max-w-6xl mx-auto px-4 py-12">
+    <h2 class="font-display text-2xl sm:text-3xl font-semibold mb-6" style="color: var(--text-primary);">{topicLinks.title}</h2>
+    <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {topicLinks.items.map((it) => (
+        <a href={`/${lang}/${it.slug}`} class="block rounded-2xl border p-5 transition hover:shadow-lg" style="border-color: var(--border-color); background: var(--card-bg); color: var(--text-primary);">
+          <div class="text-xs uppercase tracking-wide" style="color: var(--accent);">{it.kicker}</div>
+          <div class="mt-1 font-medium">{it.label}</div>
+          <div class="mt-2 text-sm" style="color: var(--text-secondary);">{it.desc}</div>
+        </a>
+      ))}
+    </div>
+  </section>
   <SourcesSection />
 </BaseLayout>

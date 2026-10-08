@@ -1,7 +1,127 @@
 {
   "meta": {
-    "title": "Imjingak Peace Park (Pyeonghwa Nuri): Tickets, Hours, Gondola",
-    "description": "Plan your visit to Imjingak Peace Park (Pyeonghwa Nuri) in Paju — free entry, opening hours, the DMZ Peace Gondola, Freedom Bridge and Seoul directions."
+    "title": "Imjingak Peace Park (Pyeonghwa Nuri) | Hours & Free Entry",
+    "description": "Plan your visit to Imjingak Pyeonghwa Nuri Park in Paju. Discover free park entry, opening hours, Wind Hill, Peace Gondola tips, and how to get there from Seoul."
+  },
+  "gettingThere": {
+    "title": "How to Get to Imjingak from Seoul",
+    "description": "Step-by-step ways to reach Imjingak Pyeonghwa Nuri Park from Seoul — train to Imjingang Station, bus via Paju, car and taxi, with transfer tips and timetable checks.",
+    "intro": "Imjingak Pyeonghwa Nuri Park sits about 54 km northwest of Seoul in Paju, Gyeonggi-do. Most visitors arrive by train on the Gyeongui-Jungang Line, but bus, car and taxi are all practical. Below are the real-world options and how to confirm schedules on the day.",
+    "sections": [
+      { "title": "Train: Gyeongui-Jungang Line to Imjingang Station", "body": "From Seoul (Seoul Station or Yongsan) take the Gyeongui-Jungang Line toward Imjingang Station. The ride is roughly 70-100 minutes depending on express or local service. From Imjingang Station it is a signed 10-15 minute walk to Wind Hill. Use a T-money or Climate Card; check the live timetable in the Korail or KakaoMetro app before leaving, since weekday and weekend frequencies differ." },
+      { "title": "Bus via Paju or Munsan, then local transfer", "body": "Intercity and express buses run from Seoul terminals (Hapjeong, Sinchon, Dongseoul) to Paju or Munsan. From there transfer to a Paju city bus toward Imjingang or take a taxi for the last few kilometers. This suits travelers already visiting Heyri Art Village or Paju Book City." },
+      { "title": "Car or taxi from Seoul", "body": "Driving takes about 1 to 1.5 hours via Jayu-ro. Several public parking lots surround the park; rates vary by season and time, so follow on-site signage. A door-to-door taxi or ride-hail is easiest with luggage, children, seniors, or early and late arrivals, and lets you combine Imjingak with the DMZ Observatory or Heyri in one day." },
+      { "title": "Confirm before you go", "body": "Schedules change on holidays and during DMZ events. Always re-check the same-day train or bus timetable. If you plan a DMZ experience such as the Peace Gondola or Peace Train, confirm passport requirements and operation separately, since those are not part of the free public park." }
+    ],
+    "faq": {
+      "title": "FAQ: Getting to Imjingak",
+      "categories": [
+        { "title": "From Seoul", "items": [
+          { "q": "How long is the train from Seoul to Imjingak?", "a": "About 70-100 minutes on the Gyeongui-Jungang Line to Imjingang Station, then a 10-15 minute walk. Express services are faster; local trains stop more often." },
+          { "q": "Can I use Seoul public transport cards?", "a": "Yes. T-money and Climate Card work on the train and on Paju city buses. Tap in and out and keep the card for transfers." },
+          { "q": "Is Imjingak reachable without a tour?", "a": "Yes. The public park is free and open 24 hours, so you can visit independently by train, bus, car or taxi. DMZ-only experiences such as the gondola or observatory tours are separate and may need ID." },
+          { "q": "What is easiest with kids or luggage?", "a": "A taxi or ride-hail door-to-door is simplest, or drive and use the public parking lots. The station walk is flat but longer with small children." }
+        ] }
+      ]
+    }
+  },
+  "gettingThereTrain": {
+    "title": "Train to Imjingak from Seoul (Gyeongui-Jungang Line)",
+    "description": "Take the Gyeongui-Jungang Line to Imjingang Station: express vs local, where to board in Seoul, T-money and apps, fares, frequency and the walk to Wind Hill.",
+    "intro": "The train is the most direct public option to Imjingak. Below is the detail you need to board confidently — stations, service types, payment, schedules and the final walk.",
+    "sections": [
+      { "title": "Where to board in Seoul", "body": "Trains toward Imjingang Station run from Seoul Station and Yongsan on the Gyeongui-Jungang Line. Both connect to the Seoul subway, so most visitors reach the boarding station by subway first. Check the live departure board for 'Imjingang' as the destination." },
+      { "title": "Express vs local service", "body": "Some services are express (fewer stops, ~70 min) and some stop at every station (~100 min). Express trains are clearly marked and cost a little more. If you are short on time, wait for the express; if you want a cheaper, scenic ride, take the local." },
+      { "title": "Payment: T-money and Climate Card", "body": "Tap a T-money or Climate Card at the gate; both work on the train and on Paju city buses for easy transfers. Buy or top up at any subway station. Keep the same card for the short Paju bus connection if you transfer." },
+      { "title": "Check the same-day timetable", "body": "Use the Korail app or KakaoMetro for real-time departures; weekday and weekend frequencies differ and holiday schedules change. Screens at Seoul Station also show the next Imjingang train." },
+      { "title": "The final walk to Wind Hill", "body": "From Imjingang Station, follow the signed path about 10-15 minutes to Wind Hill. The route is flat and paved. If you have heavy luggage or small children, a taxi from the station forecourt covers the last stretch in a couple of minutes." }
+    ],
+    "faq": {
+      "title": "FAQ: Taking the train to Imjingak",
+      "categories": [
+        { "title": "On the train", "items": [
+          { "q": "Which Seoul station goes to Imjingang?", "a": "Seoul Station and Yongsan both serve the Gyeongui-Jungang Line toward Imjingang Station. Reach either by Seoul subway, then board the Imjingang-bound train." },
+          { "q": "How much is the train fare?", "a": "Fares are modest and paid by T-money or Climate Card; express services cost a bit more than local. Check the Korail app for the exact amount on your travel day." },
+          { "q": "Is the train wheelchair and stroller friendly?", "a": "Yes — stations have elevators and the walk to Wind Hill is flat and paved, suitable for strollers and wheelchairs." },
+          { "q": "What is the last train back to Seoul?", "a": "Evening return trains run, but frequency drops at night. Confirm the last Imjingang-to-Seoul departure in the app before you visit so you are not stranded." }
+        ] }
+      ]
+    }
+  },
+  "gettingThereBus": {
+    "title": "Bus to Imjingak from Seoul (via Paju / Munsan)",
+    "description": "Intercity and express buses from Seoul to Paju or Munsan, then a Paju city bus or taxi to Imjingak, with terminals, transfer tips and timing.",
+    "intro": "If you are already visiting Heyri Art Village or Paju Book City, the bus is a natural fit. Here is how the bus route connects to Imjingak.",
+    "sections": [
+      { "title": "Seoul terminals to Paju or Munsan", "body": "Intercity and express buses leave from Seoul terminals such as Hapjeong, Sinchon and Dongseoul toward Paju or Munsan. Travel time is roughly 50-80 minutes depending on traffic and terminal." },
+      { "title": "Last-mile transfer to Imjingak", "body": "From Paju or Munsan bus terminal, take a Paju city bus toward Imjingang or a short taxi for the final few kilometers to the park entrance. Taxis wait outside the terminal; the ride is quick and cheap." },
+      { "title": "Pair with Heyri or Paju Book City", "body": "The bus drops you close to Heyri Art Village and Paju Book City, so you can combine the art village, bookstores and Imjingak in one day without backtracking to Seoul." },
+      { "title": "Payment and tickets", "body": "Buy tickets at the terminal counter or machine; Paju city buses take T-money or Climate Card. Board the correct city bus by the destination sign 'Imjingang' and tap off at the park stop." }
+    ],
+    "faq": {
+      "title": "FAQ: Taking the bus to Imjingak",
+      "categories": [
+        { "title": "Bus route", "items": [
+          { "q": "Which Seoul bus goes toward Imjingak?", "a": "Buses from Hapjeong, Sinchon and Dongseoul run to Paju or Munsan; from there transfer to a Paju city bus or taxi to the park." },
+          { "q": "How long is the bus trip?", "a": "About 50-80 minutes from Seoul to Paju or Munsan by intercity bus, plus a short city bus or taxi to the gate. Allow extra time in rush hour." },
+          { "q": "Can I use T-money on the local bus?", "a": "Yes. Paju city buses accept T-money and Climate Card; tap on and off. The intercity coach is paid by ticket at the terminal." },
+          { "q": "Is the bus good with Heyri Art Village?", "a": "Yes — the bus passes near Heyri and Paju Book City, making it easy to pair the art village with Imjingak in one trip." }
+        ] }
+      ]
+    }
+  },
+  "dmzGuide": {
+    "title": "Imjingak & the DMZ: Visitor Guide",
+    "description": "Can you enter the park without a DMZ tour? ID rules, what is free, and how the Peace Gondola and DMZ tours differ from the public park at Imjingak.",
+    "intro": "Imjingak is the closest major public site to the Military Demarcation Line. Many visitors wonder whether they need a DMZ tour or special permission to come here. This guide separates what is free and open from what requires booking and ID.",
+    "sections": [
+      { "title": "The public park is free and needs no tour", "body": "The Imjingak Pyeonghwa Nuri Park green space — Wind Hill, Peace Bell, Freedom Bridge, Mangbaedan and the lawns — is free, open 24 hours, and needs no ticket, reservation or guided tour. You can simply arrive by train, bus, car or taxi and walk in." },
+      { "title": "ID and controlled areas", "body": "You do not need a passport to enter the public park. However, the park sits next to the DMZ and Military Demarcation Line: stay on marked paths, do not cross fences or closed zones, and follow on-site guidance. Drones are normally prohibited near the military area." },
+      { "title": "Peace Gondola and DMZ experiences (paid, separate)", "body": "The Imjingak Peace Gondola crosses the Imjin River toward the DMZ and is a paid, separately ticketed experience that usually requires on-site passport registration. DMZ guided tours to observatories and tunnels are organized programs with advance booking and ID checks — not the same as visiting the free park." },
+      { "title": "Choosing what to book", "body": "If your goal is the pinwheels, bell and memorial landscape, the free park is enough. Add the Peace Gondola for the river crossing view, and book a full DMZ tour only if you specifically want the observatories and tunnels. Confirm same-day operation and ID rules before paying." }
+    ],
+    "faq": {
+      "title": "FAQ: Imjingak and the DMZ",
+      "categories": [
+        { "title": "Access and permits", "items": [
+          { "q": "Do I need a tour or permit to visit Imjingak?", "a": "No. The public park is free and open to everyone without a tour, ticket or permit. Only the gondola and DMZ guided tours are separate paid experiences." },
+          { "q": "Do I need a passport at Imjingak?", "a": "Not for the public park. Bring ID only if you plan the Peace Gondola or a DMZ guided tour, which typically require on-site passport registration." },
+          { "q": "Can foreigners visit the DMZ from Seoul?", "a": "Yes, through official DMZ tour operators that handle booking and ID in advance. The free Imjingak park itself needs no tour and is open to all visitors." },
+          { "q": "Is the Peace Gondola inside the park?", "a": "The gondola station is at Imjingak, but riding it across the Imjin River into the DMZ is a separate paid ticket with passport registration, different from walking the free park." }
+        ] }
+      ]
+    }
+  },
+  "photos": {
+    "title": "Imjingak Pyeonghwa Nuri Park Photos",
+    "description": "Real photo spots at Imjingak Pyeonghwa Nuri Park in Paju — Wind Hill pinwheels, Peace Bell, Freedom Bridge and war relics, with where each was taken and best light.",
+    "intro": "Imjingak is one of the most photogenic memorial parks near Seoul. The open fields, thousands of pinwheels and riverside light make it a favorite for casual and serious photography. Here are the main spots and when to shoot them.",
+    "gallerySections": [
+      { "title": "Wind Hill and the pinwheel sea", "body": "The signature shot: thousands of colorful pinwheels on an open slope above the Imjin River.", "images": [
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-1.jpg", "alt": "Wind Hill pinwheels at Imjingak Pyeonghwa Nuri Park, Paju", "caption": "Wind Hill pinwheel field — shoot at golden hour for warm front light." },
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-2.jpg", "alt": "Close-up of pinwheels at Imjingak Pyeonghwa Nuri Park", "caption": "A single pinwheel against the blue-hour sky." },
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-3.jpg", "alt": "Visitors walking among pinwheels at Imjingak", "caption": "People scale the slope among the pinwheels." }
+      ] },
+      { "title": "Peace Bell and Freedom Bridge", "body": "Memorial landmarks with strong silhouettes at dusk.", "images": [
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-4.jpg", "alt": "Peace Bell at Imjingak Pyeonghwa Nuri Park", "caption": "The Peace Bell — solemn, best shot quietly without crowds." },
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-5.jpg", "alt": "Freedom Bridge at Imjingak", "caption": "Freedom Bridge over the Imjin River." },
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-6.jpg", "alt": "War relics and peace art at Imjingak lawn", "caption": "Outdoor lawn with war relics and peace art." }
+      ] },
+      { "title": "Riverside and golden hour", "body": "The flat open fields by the Imjin River give the cleanest light.", "images": [
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-7.jpg", "alt": "Open fields by the Imjin River at Imjingak", "caption": "Wide-open river fields — best at sunrise or sunset." },
+        { "src": "/gallery/imjingak-pyeonghwa-nuri-park-8.jpg", "alt": "Blue-hour sky over Imjingak park", "caption": "Blue hour after sunset over the park." }
+      ] }
+    ],
+    "faq": {
+      "title": "FAQ: Photography at Imjingak",
+      "categories": [
+        { "title": "Shooting tips", "items": [
+          { "q": "When is the best light for photos?", "a": "Arrive about 60 minutes before sunset for golden-hour front light on the pinwheels and Peace Bell; early morning river mist is best for quiet wide shots. Avoid harsh midday sun." },
+          { "q": "Is drone photography allowed?", "a": "No. Near the DMZ and military area, drones are normally banned. Use a tripod and ground-level angles instead." },
+          { "q": "Is the park good for family photos?", "a": "Yes. The open lawns and pinwheels are popular for relaxed family and travel photos, especially on weekdays to avoid crowds." }
+        ] }
+      ]
+    }
   },
   "entity": {
     "aboutTitle": "About Imjingak Pyeonghwa Nuri Park",
@@ -11,7 +131,7 @@
     "landmarksTitle": "Landmarks & Attractions Around Imjingak Peace Park",
     "landmarksBody": "When visiting Imjingak Pyeonghwa Nuri Park, visitors can easily explore surrounding historical landmarks and points of interest, including the Imjingak Peace Gondola and Dorasan Observatory.",
     "historyTitle": "History & Significance of Imjingak Pyeonghwa Nuri Park",
-    "historyBody": "Imjingak was established in 1972 as a place of reunion and remembrance for families separated by the Korean War. Over the following decades it gained the Peace Bell, Freedom Bridge, the Mangbaedan altar, and the 2005 Wind Hill pinwheel installation, becoming a key site for understanding the division and peace memory of the Korean Peninsula.",
+    "historyBody": "Imjingak's original memorial grounds were established in 1972 as a place of reunion and remembrance for families separated by the Korean War. Over the following decades the site gained the Peace Bell, Freedom Bridge and the Mangbaedan altar. Then, for the 2005 World Peace Festival, the wider area was redeveloped into Pyeonghwa Nuri Park — with the Wind Hill pinwheel field as its signature landscape. So 1972 marks Imjingak's origin, while 2005 marks the park visitors experience today. (Background cross-checked with the Korea Tourism Organization and Gyeonggi Tourism Organization.)",
     "hierarchyLabel": "Geographic hierarchy",
     "hierarchy": ["Imjingak Pyeonghwa Nuri Park", "Paju-si", "Gyeonggi-do", "South Korea"],
     "govLinkLabel": "South Korea / Gyeonggi-do Official Tourism Portal",
@@ -29,7 +149,7 @@
       { "name": "Open-Meteo — Weather Forecast Data", "url": "https://open-meteo.com/", "publisher": "Open-Meteo", "note": "Data source behind the live forecast values shown on this page." }
     ],
     "updatedLabel": "Last verified",
-    "updatedValue": "2026-06"
+    "updatedValue": "2026-10"
   },
   "schema": {
     "name": "Imjingak Pyeonghwa Nuri Park",
@@ -103,8 +223,8 @@
   "hero": {
     "title": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원)",
     "subtitle": "A vast green peace park in Paju, Gyeonggi-do, right beside the Military Demarcation Line, built to pray for peace and reunification of the Korean Peninsula. Its iconic Wind Hill — thousands of colorful pinwheels — along with the Peace Bell, Freedom Bridge and lawns displaying war relics and peace art installations, form a cultural landmark for looking back at history and offering hopes for peace.",
-    "rating": "4.4 (7,477)",
-    "reviewCount": "7,477 reviews",
+    "rating": "4.4 (7,486)",
+    "reviewCount": "7,486 reviews",
     "hours": "Open 24 hours (public park area)",
     "admission": "Free entry",
     "plusCodeLabel": "Plus Code",
@@ -142,7 +262,7 @@
     "title": "Imjingak at a Glance · Data Board",
     "subtitle": "Read this riverside memorial landscape through a set of numbers that carry more historical weight than a typical park summary.",
     "items": [
-      { "icon": "🕊️", "label": "Founded", "value": "1972", "note": "Imjingak was first created for separated families. It was not conceived as a leisure park, but as a place where people unable to return home could face north and hold on to memory." },
+      { "icon": "🕊️", "label": "Founded", "value": "1972", "note": "Imjingak's memorial grounds date to 1972, built for separated families. The surrounding Pyeonghwa Nuri Park was created for the 2005 World Peace Festival — so 1972 is Imjingak's origin, and 2005 is the park visitors see today." },
       { "icon": "🎡", "label": "Wind Hill", "value": "3,000 pinwheels", "note": "The pinwheels of Wind Hill are often read as an allusion to the traditional phrase 'three thousand ri of Korean land', turning peace into a visible public landscape." },
       { "icon": "🚂", "label": "Jangdan Station steam locomotive", "value": "1,020 bullet holes", "note": "The ruined locomotive known as the 'Iron Horse' remains one of the clearest physical witnesses of wartime destruction, now preserved as Registered Cultural Heritage No. 78." },
       { "icon": "🌉", "label": "Freedom Bridge", "value": "12,773 POWs", "note": "After the 1953 armistice, about 12,773 South Korean and UN prisoners of war returned south through this crossing, giving the bridge its enduring moral force." },
@@ -221,7 +341,7 @@
   },
   "intro": {
     "title": "Getting to Know Imjingak Pyeonghwa Nuri Park",
-    "description": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) lies in Munsan-eup, Paju-si, Gyeonggi-do, by the Imjin River and just south of the Military Demarcation Line (DMZ) — a vast green peace park built to pray for peace and reunification of the Korean Peninsula. Established in 1972 to hold the longings of separated families for relatives in the North, it is now both a relaxing public space for citizens and an important cultural landmark to feel the history of division and the Korean War up close. Its signature Wind Hill — thousands of colorful pinwheels — is a perfect photo spot; the Peace Bell, Freedom Bridge, and lawns displaying war relics and peace art installations together form an open space for looking back at history and offering hopes for peace.",
+    "description": "Imjingak Pyeonghwa Nuri Park (임진각 평화누리공원) lies in Munsan-eup, Paju-si, Gyeonggi-do, by the Imjin River and just south of the Military Demarcation Line (DMZ) — a vast green peace park built to pray for peace and reunification of the Korean Peninsula. Rooted in the 1972 Imjingak memorial for separated families, the wider Pyeonghwa Nuri Park took shape around the 2005 World Peace Festival. Today it is both a relaxing public space for citizens and an important cultural landmark to feel the history of division and the Korean War up close. Its signature Wind Hill — thousands of colorful pinwheels — is a perfect photo spot; the Peace Bell, Freedom Bridge, and lawns displaying war relics and peace art installations together form an open space for looking back at history and offering hopes for peace.",
     "visitGuide": {
       "title": "Visit Guide",
       "eyebrow": "Practical Planning",
